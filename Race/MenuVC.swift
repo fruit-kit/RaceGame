@@ -15,6 +15,7 @@ class MenuVC: UIViewController {
         super.viewDidLoad()
         
         setupTitle()
+        setupBackgroundImage()
     }
 
     // MARK: - Private Methods
@@ -25,5 +26,18 @@ class MenuVC: UIViewController {
         self.navigationController?.navigationBar.prefersLargeTitles = true
     }
 
+    private func setupBackgroundImage() {
+        
+        guard let backgroundImage = UIImage(named: "backgroundImageMenuVC") else { return }
+        
+        let backgroundImageView = UIImageView(image: backgroundImage)
+        backgroundImageView.contentMode = .scaleAspectFill
+        backgroundImageView.frame = self.view.bounds
+        backgroundImageView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        
+        self.view.addSubview(backgroundImageView)
+        self.view.sendSubviewToBack(backgroundImageView)
+    }
+    
 }
 
