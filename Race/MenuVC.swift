@@ -9,6 +9,10 @@ import UIKit
 
 class MenuVC: UIViewController {
 
+    // MARK: - Outlets
+    
+    @IBOutlet weak var startButton: UIButton!
+    
     // MARK: - View Lifecycle
     
     override func viewDidLoad() {
@@ -16,6 +20,7 @@ class MenuVC: UIViewController {
         
         setupTitle()
         setupBackgroundImage()
+        setupStartButton()
     }
 
     // MARK: - Private Methods
@@ -37,6 +42,11 @@ class MenuVC: UIViewController {
         
         self.view.addSubview(backgroundImageView)
         self.view.sendSubviewToBack(backgroundImageView)
+    }
+    
+    private func setupStartButton() {
+        
+        self.startButton.layer.cornerRadius = 5
     }
     
 }
