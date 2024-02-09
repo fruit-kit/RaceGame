@@ -56,13 +56,22 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Race" id="alR-vZ-eB0">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="OAy-7l-wub">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Fzc-qj-F49">
+                                <rect key="frame" x="16" y="4.6666666666666679" width="87" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="person.fill" catalog="system"/>
+                            </button>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="FkD-9q-ztd">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Jf1-8a-NJu">
-                                <rect key="frame" x="-37" y="-17" width="87" height="35"/>
+                                <rect key="frame" x="290" y="4.6666666666666679" width="87" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="gearshape" catalog="system"/>
+                                <buttonConfiguration key="configuration" style="plain" image="gearshape.fill" catalog="system"/>
                             </button>
                         </barButtonItem>
                     </navigationItem>
@@ -94,7 +103,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="gearshape" catalog="system" width="128" height="123"/>
+        <image name="gearshape.fill" catalog="system" width="128" height="123"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
