@@ -9,8 +9,15 @@ import UIKit
 
 class SettingsVC: UIViewController {
 
+    // MARK: - Outlets
+    
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
 
         setupTitle()
         setupBackgroundImage()
@@ -38,4 +45,28 @@ class SettingsVC: UIViewController {
         self.view.sendSubviewToBack(backgroundImageView)
     }
 
+}
+
+extension SettingsVC: UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        3
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        UITableViewCell()
+    }
+    
+}
+
+extension SettingsVC: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
+    
 }
