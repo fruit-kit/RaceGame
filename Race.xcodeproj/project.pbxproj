@@ -64,19 +64,59 @@
 		CCC7B4812B73EFA9009AF65C /* Race */ = {
 			isa = PBXGroup;
 			children = (
-				CCC7B4822B73EFA9009AF65C /* AppDelegate.swift */,
-				CCC7B4842B73EFA9009AF65C /* SceneDelegate.swift */,
-				CCC7B4862B73EFA9009AF65C /* MenuVC.swift */,
-				CCC7B4962B763510009AF65C /* SettingsVC.swift */,
-				CCC7B49C2B76438B009AF65C /* SettingModel.swift */,
-				CCC7B4882B73EFA9009AF65C /* Main.storyboard */,
+				CCC7B4A22B764FF6009AF65C /* App */,
+				CCC7B4A32B76504E009AF65C /* ViewControllers */,
+				CCC7B4A62B7650DD009AF65C /* Views */,
+				CCC7B4A42B765076009AF65C /* Models */,
+				CCC7B4A52B7650AD009AF65C /* Resources */,
 				CCC7B48B2B73EFAB009AF65C /* Assets.xcassets */,
-				CCC7B48D2B73EFAB009AF65C /* LaunchScreen.storyboard */,
-				CCC7B4902B73EFAB009AF65C /* Info.plist */,
-				CCC7B49E2B764CD0009AF65C /* TableViewCell.swift */,
-				CCC7B49F2B764CD0009AF65C /* TableViewCell.xib */,
 			);
 			path = Race;
+			sourceTree = "<group>";
+		};
+		CCC7B4A22B764FF6009AF65C /* App */ = {
+			isa = PBXGroup;
+			children = (
+				CCC7B4822B73EFA9009AF65C /* AppDelegate.swift */,
+				CCC7B4842B73EFA9009AF65C /* SceneDelegate.swift */,
+				CCC7B4902B73EFAB009AF65C /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		CCC7B4A32B76504E009AF65C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CCC7B4862B73EFA9009AF65C /* MenuVC.swift */,
+				CCC7B4962B763510009AF65C /* SettingsVC.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		CCC7B4A42B765076009AF65C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CCC7B49C2B76438B009AF65C /* SettingModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CCC7B4A52B7650AD009AF65C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CCC7B49F2B764CD0009AF65C /* TableViewCell.xib */,
+				CCC7B4882B73EFA9009AF65C /* Main.storyboard */,
+				CCC7B48D2B73EFAB009AF65C /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CCC7B4A62B7650DD009AF65C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CCC7B49E2B764CD0009AF65C /* TableViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
