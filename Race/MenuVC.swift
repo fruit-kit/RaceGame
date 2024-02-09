@@ -22,12 +22,25 @@ class MenuVC: UIViewController {
         setupBackgroundImage()
         setupStartButton()
     }
-
+    
+    // MARK: - Actions
+    
+    @IBAction func settingsButtonPressed(_ sender: UIButton) {
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        
+        guard let destinationVC = storyboard.instantiateViewController(withIdentifier: "SettingsVC") as? SettingsVC else {
+            return
+        }
+        
+        self.navigationController?.pushViewController(destinationVC, animated: true)
+    }
+    
     // MARK: - Private Methods
     
     private func setupTitle() {
         
-        self.title = "Race"
+        self.title = "Menu"
         self.navigationController?.navigationBar.prefersLargeTitles = true
     }
 
