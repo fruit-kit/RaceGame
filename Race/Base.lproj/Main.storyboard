@@ -32,12 +32,27 @@
                                     <color key="baseBackgroundColor" systemColor="systemRedColor"/>
                                 </buttonConfiguration>
                             </button>
+                            <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pgf-cl-qMZ">
+                                <rect key="frame" x="156.66666666666666" y="482" width="80" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="WrL-9d-eel"/>
+                                    <constraint firstAttribute="width" constant="80" id="bI5-gI-ZGn"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Stats">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
+                                    <color key="baseBackgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="3PR-63-1bn" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Pzh-q9-HYf"/>
                             <constraint firstItem="3PR-63-1bn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Z2R-RU-DFa"/>
+                            <constraint firstItem="Pgf-cl-qMZ" firstAttribute="top" secondItem="3PR-63-1bn" secondAttribute="bottom" constant="16" id="cn6-eT-T1i"/>
+                            <constraint firstItem="Pgf-cl-qMZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vu7-yf-x8r"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Race" id="alR-vZ-eB0"/>
