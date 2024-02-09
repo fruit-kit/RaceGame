@@ -8,6 +8,10 @@
 import UIKit
 
 class SettingsVC: UIViewController {
+    
+    // MARK: - Properties
+    
+    private var settings: [Setting] = [Setting(settingName: "Sound", switchValue: true)]
 
     // MARK: - Outlets
     
@@ -18,6 +22,10 @@ class SettingsVC: UIViewController {
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        
+        let cellNib = UINib(nibName: "TableViewCell", bundle: Bundle.main)
+        
+        tableView.register(cellNib, forCellReuseIdentifier: "TableViewCell")
 
         setupTitle()
         setupBackgroundImage()
@@ -47,21 +55,40 @@ class SettingsVC: UIViewController {
 
 }
 
+// MARK: - Extensions
+
+// MARK: DataSource
+
 extension SettingsVC: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
+        
         1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        3
+        
+        self.settings.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        UITableViewCell()
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as? TableViewCell else {
+            return UITableViewCell()
+        }
+        
+        let index = indexPath.row
+        
+        cell.settingName.text = self.settings[index].settingName
+        
+        cell.settingSwitcher.isOn = self.settings[index].switchValue
+        
+        return cell
     }
     
 }
+
+// MARK: Delegates
 
 extension SettingsVC: UITableViewDelegate {
     

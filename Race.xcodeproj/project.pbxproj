@@ -14,6 +14,9 @@
 		CCC7B48C2B73EFAB009AF65C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCC7B48B2B73EFAB009AF65C /* Assets.xcassets */; };
 		CCC7B48F2B73EFAB009AF65C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCC7B48D2B73EFAB009AF65C /* LaunchScreen.storyboard */; };
 		CCC7B4972B763510009AF65C /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC7B4962B763510009AF65C /* SettingsVC.swift */; };
+		CCC7B49D2B76438B009AF65C /* SettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC7B49C2B76438B009AF65C /* SettingModel.swift */; };
+		CCC7B4A02B764CD0009AF65C /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC7B49E2B764CD0009AF65C /* TableViewCell.swift */; };
+		CCC7B4A12B764CD0009AF65C /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCC7B49F2B764CD0009AF65C /* TableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		CCC7B48E2B73EFAB009AF65C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CCC7B4902B73EFAB009AF65C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CCC7B4962B763510009AF65C /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		CCC7B49C2B76438B009AF65C /* SettingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingModel.swift; sourceTree = "<group>"; };
+		CCC7B49E2B764CD0009AF65C /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		CCC7B49F2B764CD0009AF65C /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,10 +68,13 @@
 				CCC7B4842B73EFA9009AF65C /* SceneDelegate.swift */,
 				CCC7B4862B73EFA9009AF65C /* MenuVC.swift */,
 				CCC7B4962B763510009AF65C /* SettingsVC.swift */,
+				CCC7B49C2B76438B009AF65C /* SettingModel.swift */,
 				CCC7B4882B73EFA9009AF65C /* Main.storyboard */,
 				CCC7B48B2B73EFAB009AF65C /* Assets.xcassets */,
 				CCC7B48D2B73EFAB009AF65C /* LaunchScreen.storyboard */,
 				CCC7B4902B73EFAB009AF65C /* Info.plist */,
+				CCC7B49E2B764CD0009AF65C /* TableViewCell.swift */,
+				CCC7B49F2B764CD0009AF65C /* TableViewCell.xib */,
 			);
 			path = Race;
 			sourceTree = "<group>";
@@ -129,6 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCC7B48F2B73EFAB009AF65C /* LaunchScreen.storyboard in Resources */,
+				CCC7B4A12B764CD0009AF65C /* TableViewCell.xib in Resources */,
 				CCC7B48C2B73EFAB009AF65C /* Assets.xcassets in Resources */,
 				CCC7B48A2B73EFA9009AF65C /* Main.storyboard in Resources */,
 			);
@@ -143,6 +153,8 @@
 			files = (
 				CCC7B4872B73EFA9009AF65C /* MenuVC.swift in Sources */,
 				CCC7B4972B763510009AF65C /* SettingsVC.swift in Sources */,
+				CCC7B49D2B76438B009AF65C /* SettingModel.swift in Sources */,
+				CCC7B4A02B764CD0009AF65C /* TableViewCell.swift in Sources */,
 				CCC7B4832B73EFA9009AF65C /* AppDelegate.swift in Sources */,
 				CCC7B4852B73EFA9009AF65C /* SceneDelegate.swift in Sources */,
 			);
