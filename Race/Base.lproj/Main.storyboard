@@ -55,7 +55,17 @@
                             <constraint firstItem="Pgf-cl-qMZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vu7-yf-x8r"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Race" id="alR-vZ-eB0"/>
+                    <navigationItem key="navigationItem" title="Race" id="alR-vZ-eB0">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="FkD-9q-ztd">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Jf1-8a-NJu">
+                                <rect key="frame" x="-37" y="-17" width="87" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="gearshape" catalog="system"/>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="startButton" destination="3PR-63-1bn" id="J3i-FV-73A"/>
                     </connections>
@@ -84,6 +94,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="gearshape" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
