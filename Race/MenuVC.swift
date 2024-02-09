@@ -46,7 +46,7 @@ class MenuVC: UIViewController {
 
     private func setupBackgroundImage() {
         
-        guard let backgroundImage = UIImage(named: "backgroundImageMenuVC") else { return }
+        guard let backgroundImage = UIImage(named: "bg-menu") else { return }
         
         let backgroundImageView = UIImageView(image: backgroundImage)
         backgroundImageView.contentMode = .scaleAspectFill

@@ -12,18 +12,30 @@ class SettingsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setupTitle()
+        setupBackgroundImage()
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // MARK: - Private Methods
+    
+    private func setupTitle() {
+        
+        self.title = "Settings"
+        self.navigationController?.navigationBar.prefersLargeTitles = true
     }
-    */
+    
+    private func setupBackgroundImage() {
+        
+        guard let backgroundImage = UIImage(named: "bg-settings") else { return }
+        
+        let backgroundImageView = UIImageView(image: backgroundImage)
+        backgroundImageView.contentMode = .scaleAspectFill
+        backgroundImageView.frame = self.view.bounds
+        backgroundImageView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        
+        self.view.addSubview(backgroundImageView)
+        self.view.sendSubviewToBack(backgroundImageView)
+    }
 
 }
