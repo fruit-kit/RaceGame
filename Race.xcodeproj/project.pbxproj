@@ -350,7 +350,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9PUAYTQL85;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Race/Info.plist;
+				INFOPLIST_FILE = Race/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -378,7 +378,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9PUAYTQL85;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Race/Info.plist;
+				INFOPLIST_FILE = Race/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
