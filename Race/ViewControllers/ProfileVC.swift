@@ -13,6 +13,8 @@ class ProfileVC: UIViewController {
 
         setupTitle()
         
+        setupBackgroundImage()
+        
         super.viewDidLoad()
     }
 
@@ -22,6 +24,19 @@ class ProfileVC: UIViewController {
         
         self.title = "Profile"
         self.navigationController?.navigationBar.prefersLargeTitles = true
+    }
+    
+    private func setupBackgroundImage() {
+        
+        guard let backgroundImage = UIImage(named: "bg-profile") else { return }
+        
+        let backgroundImageView = UIImageView(image: backgroundImage)
+        backgroundImageView.contentMode = .scaleAspectFill
+        backgroundImageView.frame = self.view.bounds
+        backgroundImageView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        
+        self.view.addSubview(backgroundImageView)
+        self.view.sendSubviewToBack(backgroundImageView)
     }
     
 }
