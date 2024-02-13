@@ -16,13 +16,14 @@ class MenuVC: UIViewController {
     // MARK: - View Lifecycle
     
     override func viewDidLoad() {
-        super.viewDidLoad()
         
         setupTitle()
         
         setupBackgroundImage()
         
         setupStartButton()
+        
+        super.viewDidLoad()
     }
     
     // MARK: - Private Methods
