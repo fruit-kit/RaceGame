@@ -18,6 +18,7 @@
 		CCC7B4A02B764CD0009AF65C /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC7B49E2B764CD0009AF65C /* TableViewCell.swift */; };
 		CCC7B4A12B764CD0009AF65C /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCC7B49F2B764CD0009AF65C /* TableViewCell.xib */; };
 		CCC8084D2B7B9D6D006D013E /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC8084C2B7B9D6D006D013E /* SettingsManager.swift */; };
+		CCC8084F2B7BBE02006D013E /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC8084E2B7BBE02006D013E /* ProfileVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		CCC7B49E2B764CD0009AF65C /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		CCC7B49F2B764CD0009AF65C /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		CCC8084C2B7B9D6D006D013E /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
+		CCC8084E2B7BBE02006D013E /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 			children = (
 				CCC7B4862B73EFA9009AF65C /* MenuVC.swift */,
 				CCC7B4962B763510009AF65C /* SettingsVC.swift */,
+				CCC8084E2B7BBE02006D013E /* ProfileVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 				CCC7B4972B763510009AF65C /* SettingsVC.swift in Sources */,
 				CCC7B49D2B76438B009AF65C /* SettingModel.swift in Sources */,
 				CCC8084D2B7B9D6D006D013E /* SettingsManager.swift in Sources */,
+				CCC8084F2B7BBE02006D013E /* ProfileVC.swift in Sources */,
 				CCC7B4A02B764CD0009AF65C /* TableViewCell.swift in Sources */,
 				CCC7B4832B73EFA9009AF65C /* AppDelegate.swift in Sources */,
 				CCC7B4852B73EFA9009AF65C /* SceneDelegate.swift in Sources */,

@@ -8,7 +8,23 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Race-->
+        <!--ProfileVC-->
+        <scene sceneID="KhJ-4u-VpQ">
+            <objects>
+                <viewController id="83G-aE-JOu" customClass="ProfileVC" customModule="Race" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rxs-un-aX7">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Osn-SP-qAl"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ghg-2Z-RZk"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5NT-96-A9l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1815" y="-392"/>
+        </scene>
+        <!--Menu-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MenuVC" customModule="Race" customModuleProvider="target" sceneMemberID="viewController">
@@ -55,7 +71,7 @@
                             <constraint firstItem="Pgf-cl-qMZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vu7-yf-x8r"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Race" id="alR-vZ-eB0">
+                    <navigationItem key="navigationItem" title="Menu" id="alR-vZ-eB0">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="OAy-7l-wub">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Fzc-qj-F49">
                                 <rect key="frame" x="16" y="4.6666666666666679" width="87" height="35"/>
@@ -63,6 +79,9 @@
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="person" catalog="system"/>
+                                <connections>
+                                    <segue destination="83G-aE-JOu" kind="show" id="G7u-gD-ZNp"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="FkD-9q-ztd">
@@ -115,7 +134,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AmL-JX-5ah" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1982" y="-2"/>
+            <point key="canvasLocation" x="1816" y="315"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yfF-5v-nWv">
