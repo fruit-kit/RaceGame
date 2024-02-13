@@ -19,7 +19,9 @@ class MenuVC: UIViewController {
         super.viewDidLoad()
         
         setupTitle()
+        
         setupBackgroundImage()
+        
         setupStartButton()
     }
     

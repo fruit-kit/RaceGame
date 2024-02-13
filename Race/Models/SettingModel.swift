@@ -10,6 +10,7 @@ import UIKit
 struct Setting {
     
     var settingName: String
+    
     var switchValue: Bool
 
 }

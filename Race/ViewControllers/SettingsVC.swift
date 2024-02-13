@@ -11,7 +11,7 @@ class SettingsVC: UIViewController {
     
     // MARK: - Properties
     
-    private var settings: [Setting] = [Setting(settingName: "Sound", switchValue: true)]
+    private let settings = SettingsManager.shared.settings
 
     // MARK: - Outlets
     
@@ -19,16 +19,12 @@ class SettingsVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
-        
-        let cellNib = UINib(nibName: "TableViewCell", bundle: Bundle.main)
-        
-        tableView.register(cellNib, forCellReuseIdentifier: "TableViewCell")
 
         setupTitle()
+        
         setupBackgroundImage()
+        
+        setupTableView()
     }
     
 
@@ -51,6 +47,15 @@ class SettingsVC: UIViewController {
         
         self.view.addSubview(backgroundImageView)
         self.view.sendSubviewToBack(backgroundImageView)
+    }
+    
+    private func setupTableView() {
+        
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+        
+        let cellNib = UINib(nibName: "TableViewCell", bundle: Bundle.main)
+        tableView.register(cellNib, forCellReuseIdentifier: "TableViewCell")
     }
 
 }
