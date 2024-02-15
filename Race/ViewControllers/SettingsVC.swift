@@ -55,6 +55,11 @@ class SettingsVC: UIViewController {
         self.tableView.delegate = self
         self.tableView.dataSource = self
         
+        registerCell()
+    }
+    
+    private func registerCell() {
+        
         let cellNib = UINib(nibName: "TableViewCell", bundle: Bundle.main)
         tableView.register(cellNib, forCellReuseIdentifier: "TableViewCell")
     }
