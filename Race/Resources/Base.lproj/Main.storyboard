@@ -8,6 +8,22 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--GameplayVC-->
+        <scene sceneID="slq-tH-nhD">
+            <objects>
+                <viewController id="bgD-1R-qnj" customClass="GameplayVC" customModule="Race" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ATI-Zb-tVd">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="rtI-CF-rH3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="t6c-wV-fz4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hUM-0j-w0e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2585" y="31"/>
+        </scene>
         <!--ProfileVC-->
         <scene sceneID="KhJ-4u-VpQ">
             <objects>
@@ -22,7 +38,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5NT-96-A9l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1815" y="-327"/>
+            <point key="canvasLocation" x="1813" y="-502"/>
         </scene>
         <!--Menu-->
         <scene sceneID="tne-QT-ifu">
@@ -47,6 +63,9 @@
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="40"/>
                                     <color key="baseBackgroundColor" systemColor="systemRedColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="bgD-1R-qnj" kind="show" id="8hL-Iz-u6u"/>
+                                </connections>
                             </button>
                             <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pgf-cl-qMZ">
                                 <rect key="frame" x="156.66666666666666" y="482" width="80" height="40"/>
@@ -153,7 +172,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AmL-JX-5ah" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1815" y="373"/>
+            <point key="canvasLocation" x="1813" y="456"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yfF-5v-nWv">

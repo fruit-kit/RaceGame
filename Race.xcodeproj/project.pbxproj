@@ -20,6 +20,7 @@
 		CCC8084D2B7B9D6D006D013E /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC8084C2B7B9D6D006D013E /* SettingsManager.swift */; };
 		CCC8084F2B7BBE02006D013E /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC8084E2B7BBE02006D013E /* ProfileVC.swift */; };
 		CCCF66A52B7E482F00A54135 /* StatsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCF66A42B7E482F00A54135 /* StatsVC.swift */; };
+		CCCF66A72B7F873B00A54135 /* GameplayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCF66A62B7F873B00A54135 /* GameplayVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		CCC8084C2B7B9D6D006D013E /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
 		CCC8084E2B7BBE02006D013E /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		CCCF66A42B7E482F00A54135 /* StatsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsVC.swift; sourceTree = "<group>"; };
+		CCCF66A62B7F873B00A54135 /* GameplayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameplayVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				CCC7B4962B763510009AF65C /* SettingsVC.swift */,
 				CCC8084E2B7BBE02006D013E /* ProfileVC.swift */,
 				CCCF66A42B7E482F00A54135 /* StatsVC.swift */,
+				CCCF66A62B7F873B00A54135 /* GameplayVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 			files = (
 				CCC7B4872B73EFA9009AF65C /* MenuVC.swift in Sources */,
 				CCC7B4972B763510009AF65C /* SettingsVC.swift in Sources */,
+				CCCF66A72B7F873B00A54135 /* GameplayVC.swift in Sources */,
 				CCC7B49D2B76438B009AF65C /* SettingModel.swift in Sources */,
 				CCC8084D2B7B9D6D006D013E /* SettingsManager.swift in Sources */,
 				CCC8084F2B7BBE02006D013E /* ProfileVC.swift in Sources */,
