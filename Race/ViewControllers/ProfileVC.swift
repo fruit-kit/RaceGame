@@ -9,6 +9,8 @@ import UIKit
 
 class ProfileVC: UIViewController {
 
+    // MARK: - View Lifecycle
+    
     override func viewDidLoad() {
 
         setupTitle()

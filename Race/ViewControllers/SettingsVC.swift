@@ -17,6 +17,8 @@ class SettingsVC: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    // MARK: - View Lifecycle
+    
     override func viewDidLoad() {
 
         setupTitle()
