@@ -34,6 +34,7 @@ class GameplayVC: UIViewController {
     override func viewDidLoad() {
         
         self.car.contentMode = .scaleAspectFit
+        self.tree.contentMode = .scaleAspectFit
         
         super.viewDidLoad()
     }
@@ -80,14 +81,49 @@ class GameplayVC: UIViewController {
         
         let bottomSafeAreaPadding = UIApplication.shared.windows.first?.safeAreaInsets.bottom ?? 0
         
-        let yCarCoordinate = screenHeight - bottomSafeAreaPadding - elementSize - self.defaultPadding
+        // MARK: - Car
+        
+        let yCarCoordinateOfCar = screenHeight - bottomSafeAreaPadding - elementSize - self.defaultPadding
         
         self.car.frame = CGRect(x: self.centerOriginCoordinate,
-                                y: yCarCoordinate,
+                                y: yCarCoordinateOfCar,
                                 width: self.elementSize,
                                 height: self.elementSize)
         
         self.view.addSubview(self.car)
+        
+        // MARK: - Tree
+        
+        let yCarCoordinateOfTree = (screenHeight - elementSize) / 2
+        
+        self.tree.frame = CGRect(x: self.leftOriginCoordinate,
+                                y: yCarCoordinateOfTree,
+                                width: self.elementSize,
+                                height: self.elementSize)
+        
+        self.view.addSubview(self.tree)
+        
+        // MARK: - Barrier
+        
+        let yCarCoordinateOfBarrier = (screenHeight - elementSize) / 3
+        
+        self.barrier.frame = CGRect(x: self.centerOriginCoordinate,
+                                y: yCarCoordinateOfBarrier,
+                                width: self.elementSize,
+                                height: self.elementSize)
+        
+        self.view.addSubview(self.barrier)
+        
+        // MARK: - Rock
+        
+        let yCarCoordinateOfRock = (screenHeight - elementSize) / 5
+        
+        self.rock.frame = CGRect(x: self.rightOriginCoordinate,
+                                y: yCarCoordinateOfRock,
+                                width: self.elementSize,
+                                height: self.elementSize)
+        
+        self.view.addSubview(self.rock)
     }
 
 }
