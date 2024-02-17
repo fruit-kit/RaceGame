@@ -28,39 +28,46 @@ class GameplayVC: UIViewController {
     private var elementSize: CGFloat = 0
     
     private let defaultPadding: CGFloat = 100
+    
+    private enum ElementPosition {
+        
+        case left, center, right
+    }
 
     // MARK: - View Lifecycle
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         
         self.car.contentMode = .scaleAspectFit
         self.tree.contentMode = .scaleAspectFit
-        
-        super.viewDidLoad()
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         setupCoordinates()
         
         setupFrames()
         
-        super.viewWillAppear(animated)
+        addSubviews()
     }
     
     @IBAction func PositionSegmentControl(_ sender: UISegmentedControl) {
         
         switch sender.selectedSegmentIndex {
         case 0:
-            self.car.frame.origin.x = self.leftOriginCoordinate
+            moveCar(to: .left)
         case 1:
-            self.car.frame.origin.x = self.centerOriginCoordinate
+            moveCar(to: .center)
         case 2:
-            self.car.frame.origin.x = self.rightOriginCoordinate
+            moveCar(to: .right)
         default:
             break
         }
     }
+    
+    // MARK: - Private Methods
     
     private func setupCoordinates() {
         
@@ -87,47 +94,59 @@ class GameplayVC: UIViewController {
         
         // MARK: - Car
         
-        let yCarCoordinateOfCar = screenHeight - bottomSafeAreaPadding - self.elementSize - self.defaultPadding
+        let yCoordinateOfCar = screenHeight - bottomSafeAreaPadding - self.elementSize - self.defaultPadding
         
         self.car.frame = CGRect(x: self.centerOriginCoordinate,
-                                y: yCarCoordinateOfCar,
+                                y: yCoordinateOfCar,
                                 width: self.elementSize,
                                 height: self.elementSize)
-        
-        self.view.addSubview(self.car)
         
         // MARK: - Tree
         
-        let yCarCoordinateOfTree = (topSafeAreaPadding + navigationBarHeight) * 3
+        let yCoordinateOfTree = (topSafeAreaPadding + navigationBarHeight) * 3
         
         self.tree.frame = CGRect(x: self.leftOriginCoordinate,
-                                y: yCarCoordinateOfTree,
+                                y: yCoordinateOfTree,
                                 width: self.elementSize,
                                 height: self.elementSize)
-        
-        self.view.addSubview(self.tree)
         
         // MARK: - Barrier
         
-        let yCarCoordinateOfBarrier = (topSafeAreaPadding + navigationBarHeight) * 2
+        let yCoordinateOfBarrier = (topSafeAreaPadding + navigationBarHeight) * 2
         
         self.barrier.frame = CGRect(x: self.centerOriginCoordinate,
-                                y: yCarCoordinateOfBarrier,
+                                y: yCoordinateOfBarrier,
                                 width: self.elementSize,
                                 height: self.elementSize)
-        
-        self.view.addSubview(self.barrier)
         
         // MARK: - Rock
         
-        let yCarCoordinateOfRock = (topSafeAreaPadding + navigationBarHeight)
+        let yCoordinateOfRock = (topSafeAreaPadding + navigationBarHeight)
         
         self.rock.frame = CGRect(x: self.rightOriginCoordinate,
-                                y: yCarCoordinateOfRock,
+                                y: yCoordinateOfRock,
                                 width: self.elementSize,
                                 height: self.elementSize)
+    }
+    
+    private func addSubviews() {
         
+        self.view.addSubview(self.car)
+        self.view.addSubview(self.tree)
+        self.view.addSubview(self.barrier)
         self.view.addSubview(self.rock)
+    }
+    
+    private func moveCar(to position: ElementPosition) {
+        
+        switch position {
+        case .left:
+            self.car.frame.origin.x = self.leftOriginCoordinate
+        case .center:
+            self.car.frame.origin.x = self.centerOriginCoordinate
+        case .right:
+            self.car.frame.origin.x = self.rightOriginCoordinate
+        }
     }
 
 }
