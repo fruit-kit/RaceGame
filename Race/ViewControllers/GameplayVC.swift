@@ -79,11 +79,15 @@ class GameplayVC: UIViewController {
         
         let screenHeight = self.view.frame.height
         
+        let topSafeAreaPadding = UIApplication.shared.windows.first?.safeAreaInsets.top ?? 0
+        
         let bottomSafeAreaPadding = UIApplication.shared.windows.first?.safeAreaInsets.bottom ?? 0
+        
+        let navigationBarHeight = navigationController?.navigationBar.frame.height ?? 0
         
         // MARK: - Car
         
-        let yCarCoordinateOfCar = screenHeight - bottomSafeAreaPadding - elementSize - self.defaultPadding
+        let yCarCoordinateOfCar = screenHeight - bottomSafeAreaPadding - self.elementSize - self.defaultPadding
         
         self.car.frame = CGRect(x: self.centerOriginCoordinate,
                                 y: yCarCoordinateOfCar,
@@ -94,7 +98,7 @@ class GameplayVC: UIViewController {
         
         // MARK: - Tree
         
-        let yCarCoordinateOfTree = (screenHeight - elementSize) / 2
+        let yCarCoordinateOfTree = (topSafeAreaPadding + navigationBarHeight) * 3
         
         self.tree.frame = CGRect(x: self.leftOriginCoordinate,
                                 y: yCarCoordinateOfTree,
@@ -105,7 +109,7 @@ class GameplayVC: UIViewController {
         
         // MARK: - Barrier
         
-        let yCarCoordinateOfBarrier = (screenHeight - elementSize) / 3
+        let yCarCoordinateOfBarrier = (topSafeAreaPadding + navigationBarHeight) * 2
         
         self.barrier.frame = CGRect(x: self.centerOriginCoordinate,
                                 y: yCarCoordinateOfBarrier,
@@ -116,7 +120,7 @@ class GameplayVC: UIViewController {
         
         // MARK: - Rock
         
-        let yCarCoordinateOfRock = (screenHeight - elementSize) / 5
+        let yCarCoordinateOfRock = (topSafeAreaPadding + navigationBarHeight)
         
         self.rock.frame = CGRect(x: self.rightOriginCoordinate,
                                 y: yCarCoordinateOfRock,

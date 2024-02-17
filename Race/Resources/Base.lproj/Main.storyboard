@@ -38,7 +38,7 @@
                             <constraint firstItem="Xoe-ks-2Is" firstAttribute="centerX" secondItem="ATI-Zb-tVd" secondAttribute="centerX" id="I1b-rA-tln"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="t6c-wV-fz4"/>
+                    <navigationItem key="navigationItem" style="editor" id="t6c-wV-fz4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hUM-0j-w0e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -202,6 +202,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="jfv-2Q-7hJ">
                         <rect key="frame" x="0.0" y="59" width="393" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" systemColor="labelColor"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
