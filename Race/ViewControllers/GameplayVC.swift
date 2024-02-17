@@ -27,7 +27,7 @@ class GameplayVC: UIViewController {
     
     private var elementSize: CGFloat = 0
     
-    private let defaultPadding: CGFloat = 20
+    private let defaultPadding: CGFloat = 100
 
     // MARK: - View Lifecycle
     
@@ -47,6 +47,20 @@ class GameplayVC: UIViewController {
         super.viewWillAppear(animated)
     }
     
+    @IBAction func PositionSegmentControl(_ sender: UISegmentedControl) {
+        
+        switch sender.selectedSegmentIndex {
+        case 0:
+            self.car.frame.origin.x = self.leftOriginCoordinate
+        case 1:
+            self.car.frame.origin.x = self.centerOriginCoordinate
+        case 2:
+            self.car.frame.origin.x = self.rightOriginCoordinate
+        default:
+            break
+        }
+    }
+    
     private func setupCoordinates() {
         
         let screenWidth = self.view.frame.width
@@ -64,9 +78,9 @@ class GameplayVC: UIViewController {
         
         let screenHeight = self.view.frame.height
         
-        let bottomSafeAreaPadding = UIApplication.shared.windows.first?.safeAreaInsets.bottom ?? defaultPadding
+        let bottomSafeAreaPadding = UIApplication.shared.windows.first?.safeAreaInsets.bottom ?? 0
         
-        let yCarCoordinate = screenHeight - bottomSafeAreaPadding - elementSize
+        let yCarCoordinate = screenHeight - bottomSafeAreaPadding - elementSize - self.defaultPadding
         
         self.car.frame = CGRect(x: self.centerOriginCoordinate,
                                 y: yCarCoordinate,
