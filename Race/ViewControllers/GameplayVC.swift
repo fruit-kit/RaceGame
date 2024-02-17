@@ -11,13 +11,21 @@ class GameplayVC: UIViewController {
     
     // MARK: - Properties
     
-    private let car = UIImageView(image: UIImage(named: "car"))
+    private lazy var car: UIImageView = {
+        return UIImageView(image: UIImage(named: "car"))
+    }()
     
-    private let rock = UIImageView(image: UIImage(named: "rock"))
+    private lazy var rock: UIImageView = {
+        return UIImageView(image: UIImage(named: "rock"))
+    }()
     
-    private let tree = UIImageView(image: UIImage(named: "tree"))
+    private lazy var tree: UIImageView = {
+        return UIImageView(image: UIImage(named: "tree"))
+    }()
     
-    private let barrier = UIImageView(image: UIImage(named: "barrier"))
+    private lazy var barrier: UIImageView = {
+        return UIImageView(image: UIImage(named: "barrier"))
+    }()
     
     private var leftOriginCoordinate: CGFloat = 0
     
@@ -29,17 +37,28 @@ class GameplayVC: UIViewController {
     
     private let defaultPadding: CGFloat = 100
     
+    var screenHeight: CGFloat = 0
+    
+    var screenWidth: CGFloat = 0
+    
+    let topSafeAreaPadding = UIApplication.shared.windows.first?.safeAreaInsets.top ?? 0
+    
+    let bottomSafeAreaPadding = UIApplication.shared.windows.first?.safeAreaInsets.bottom ?? 0
+    
+    var navigationBarHeight: CGFloat = 0
+    
     private enum ElementPosition {
         
         case left, center, right
     }
-
+    
     // MARK: - View Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.car.contentMode = .scaleAspectFit
+        
         self.tree.contentMode = .scaleAspectFit
     }
     
@@ -53,15 +72,21 @@ class GameplayVC: UIViewController {
         addSubviews()
     }
     
+    // MARK: - Actions
+    
     @IBAction func PositionSegmentControl(_ sender: UISegmentedControl) {
         
         switch sender.selectedSegmentIndex {
+            
         case 0:
             moveCar(to: .left)
+            
         case 1:
             moveCar(to: .center)
+            
         case 2:
             moveCar(to: .right)
+            
         default:
             break
         }
@@ -71,7 +96,11 @@ class GameplayVC: UIViewController {
     
     private func setupCoordinates() {
         
-        let screenWidth = self.view.frame.width
+        self.screenWidth = self.view.frame.width
+        
+        self.screenHeight = self.view.frame.height
+        
+        self.navigationBarHeight = navigationController?.navigationBar.frame.height ?? 0
         
         self.elementSize = screenWidth / 4
         
@@ -84,69 +113,79 @@ class GameplayVC: UIViewController {
     
     private func setupFrames() {
         
-        let screenHeight = self.view.frame.height
+        setupCar()
         
-        let topSafeAreaPadding = UIApplication.shared.windows.first?.safeAreaInsets.top ?? 0
+        setupTree()
         
-        let bottomSafeAreaPadding = UIApplication.shared.windows.first?.safeAreaInsets.bottom ?? 0
+        setupBarrier()
         
-        let navigationBarHeight = navigationController?.navigationBar.frame.height ?? 0
+        setupRock()
+    }
+    
+    private func setupCar() {
         
-        // MARK: - Car
-        
-        let yCoordinateOfCar = screenHeight - bottomSafeAreaPadding - self.elementSize - self.defaultPadding
+        let yCoordinateOfCar = self.screenHeight - self.bottomSafeAreaPadding - self.elementSize - self.defaultPadding
         
         self.car.frame = CGRect(x: self.centerOriginCoordinate,
                                 y: yCoordinateOfCar,
                                 width: self.elementSize,
                                 height: self.elementSize)
+    }
+    
+    private func setupTree() {
         
-        // MARK: - Tree
-        
-        let yCoordinateOfTree = (topSafeAreaPadding + navigationBarHeight) * 3
+        let yCoordinateOfTree = (self.topSafeAreaPadding + self.navigationBarHeight) * 3
         
         self.tree.frame = CGRect(x: self.leftOriginCoordinate,
-                                y: yCoordinateOfTree,
-                                width: self.elementSize,
-                                height: self.elementSize)
+                                 y: yCoordinateOfTree,
+                                 width: self.elementSize,
+                                 height: self.elementSize)
+    }
+    
+    private func setupBarrier() {
         
-        // MARK: - Barrier
-        
-        let yCoordinateOfBarrier = (topSafeAreaPadding + navigationBarHeight) * 2
+        let yCoordinateOfBarrier = (self.topSafeAreaPadding + self.navigationBarHeight) * 2
         
         self.barrier.frame = CGRect(x: self.centerOriginCoordinate,
-                                y: yCoordinateOfBarrier,
-                                width: self.elementSize,
-                                height: self.elementSize)
+                                    y: yCoordinateOfBarrier,
+                                    width: self.elementSize,
+                                    height: self.elementSize)
+    }
+    
+    private func setupRock() {
         
-        // MARK: - Rock
-        
-        let yCoordinateOfRock = (topSafeAreaPadding + navigationBarHeight)
+        let yCoordinateOfRock = (self.topSafeAreaPadding + self.navigationBarHeight)
         
         self.rock.frame = CGRect(x: self.rightOriginCoordinate,
-                                y: yCoordinateOfRock,
-                                width: self.elementSize,
-                                height: self.elementSize)
+                                 y: yCoordinateOfRock,
+                                 width: self.elementSize,
+                                 height: self.elementSize)
     }
     
     private func addSubviews() {
         
         self.view.addSubview(self.car)
+        
         self.view.addSubview(self.tree)
+        
         self.view.addSubview(self.barrier)
+        
         self.view.addSubview(self.rock)
     }
     
     private func moveCar(to position: ElementPosition) {
         
         switch position {
+            
         case .left:
             self.car.frame.origin.x = self.leftOriginCoordinate
+            
         case .center:
             self.car.frame.origin.x = self.centerOriginCoordinate
+            
         case .right:
             self.car.frame.origin.x = self.rightOriginCoordinate
         }
     }
-
+    
 }
