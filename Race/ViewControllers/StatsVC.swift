@@ -8,22 +8,26 @@
 import UIKit
 
 class StatsVC: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        setupBlurEffectToBackground()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func setupBlurEffectToBackground() {
+        
+        let blureEffect = UIBlurEffect(style: .light)
+        
+        let bluredEffectView = UIVisualEffectView(effect: blureEffect)
+        
+        bluredEffectView.frame = self.view.bounds
+        
+        bluredEffectView.alpha = 1
+        
+        bluredEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        
+        self.view.addSubview(bluredEffectView)
     }
-    */
-
+    
 }

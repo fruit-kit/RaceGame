@@ -152,11 +152,10 @@
         <scene sceneID="dgr-fG-Tdt">
             <objects>
                 <viewController id="2Xc-37-1ah" customClass="StatsVC" customModule="Race" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" alpha="0.69999999999999996" contentMode="scaleToFill" id="3Lw-YR-UWc">
+                    <view key="view" contentMode="scaleToFill" id="3Lw-YR-UWc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="0Nq-II-OXH"/>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" id="tTa-rt-H7R"/>
                 </viewController>
