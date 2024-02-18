@@ -44,6 +44,7 @@ class MenuVC: UIViewController {
         backgroundImageView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         
         self.view.addSubview(backgroundImageView)
+        
         self.view.sendSubviewToBack(backgroundImageView)
     }
     

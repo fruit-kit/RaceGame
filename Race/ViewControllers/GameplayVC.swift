@@ -27,6 +27,10 @@ class GameplayVC: UIViewController {
         return UIImageView(image: UIImage(named: "barrier"))
     }()
     
+    private lazy var road: UIImageView = {
+        return UIImageView(image: UIImage(named: "road"))
+    }()
+    
     private var leftOriginCoordinate: CGFloat = 0
     
     private var centerOriginCoordinate: CGFloat = 0
@@ -57,9 +61,15 @@ class GameplayVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.road.contentMode = .scaleAspectFit
+        
         self.car.contentMode = .scaleAspectFit
         
         self.tree.contentMode = .scaleAspectFit
+        
+        self.barrier.contentMode = .scaleAspectFit
+        
+        self.rock.contentMode = .scaleAspectFit
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -100,15 +110,15 @@ class GameplayVC: UIViewController {
         
         self.screenHeight = self.view.frame.height
         
-        self.navigationBarHeight = navigationController?.navigationBar.frame.height ?? 0
+        self.navigationBarHeight = self.navigationController?.navigationBar.frame.height ?? 0
         
-        self.elementSize = screenWidth / 4
+        self.elementSize = self.screenWidth / 4
         
         self.leftOriginCoordinate = self.elementSize / 4
         
         self.centerOriginCoordinate =  (self.leftOriginCoordinate * 2) + self.elementSize
         
-        self.rightOriginCoordinate = (self.elementSize * 2) + (leftOriginCoordinate * 3)
+        self.rightOriginCoordinate = (self.elementSize * 2) + (self.leftOriginCoordinate * 3)
     }
     
     private func setupFrames() {
@@ -171,6 +181,10 @@ class GameplayVC: UIViewController {
         self.view.addSubview(self.barrier)
         
         self.view.addSubview(self.rock)
+        
+        self.view.addSubview(self.road)
+        
+        self.view.sendSubviewToBack(self.road)
     }
     
     private func moveCar(to position: ElementPosition) {
