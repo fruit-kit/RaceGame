@@ -142,6 +142,14 @@ class GameplayVC: UIViewController {
                                 y: yCoordinateOfCar,
                                 width: self.elementSize,
                                 height: self.elementSize)
+        
+        self.car.layer.shadowColor = UIColor.black.cgColor
+        
+        self.car.layer.shadowOpacity = 0.6
+        
+        self.car.layer.shadowRadius = 15
+        
+        self.car.layer.shadowOffset = CGSize(width: 0, height: 25)
     }
     
     private func setupTree() {
@@ -152,6 +160,14 @@ class GameplayVC: UIViewController {
                                  y: yCoordinateOfTree,
                                  width: self.elementSize,
                                  height: self.elementSize)
+        
+        self.tree.layer.shadowColor = UIColor.black.cgColor
+        
+        self.tree.layer.shadowOpacity = 0.5
+        
+        self.tree.layer.shadowRadius = 15
+        
+        self.tree.layer.shadowOffset = CGSize(width: 0, height: 50)
     }
     
     private func setupBarrier() {
@@ -162,6 +178,15 @@ class GameplayVC: UIViewController {
                                     y: yCoordinateOfBarrier,
                                     width: self.elementSize,
                                     height: self.elementSize)
+        
+        self.barrier.layer.shadowColor = UIColor.black.cgColor
+        
+        self.barrier.layer.shadowOpacity = 0.5
+        
+        self.barrier.layer.shadowRadius = 15
+        
+        self.barrier.layer.shadowOffset = CGSize(width: 0, height: 35)
+
     }
     
     private func setupRock() {
@@ -172,6 +197,14 @@ class GameplayVC: UIViewController {
                                  y: yCoordinateOfRock,
                                  width: self.elementSize,
                                  height: self.elementSize)
+        
+        self.rock.layer.shadowColor = UIColor.black.cgColor
+        
+        self.rock.layer.shadowOpacity = 0.6
+        
+        self.rock.layer.shadowRadius = 15
+        
+        self.rock.layer.shadowOffset = CGSize(width: 0, height: 25)
     }
     
     private func setupRoad() {
