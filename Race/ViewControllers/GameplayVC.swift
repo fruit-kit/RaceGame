@@ -61,7 +61,7 @@ class GameplayVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.road.contentMode = .scaleAspectFit
+        self.road.contentMode = .scaleAspectFill
         
         self.car.contentMode = .scaleAspectFit
         
@@ -130,6 +130,8 @@ class GameplayVC: UIViewController {
         setupBarrier()
         
         setupRock()
+        
+        setupRoad()
     }
     
     private func setupCar() {
@@ -170,6 +172,13 @@ class GameplayVC: UIViewController {
                                  y: yCoordinateOfRock,
                                  width: self.elementSize,
                                  height: self.elementSize)
+    }
+    
+    private func setupRoad() {
+        
+        self.road.frame.size.width = self.screenWidth
+        
+        self.road.frame.size.height = self.screenHeight
     }
     
     private func addSubviews() {
