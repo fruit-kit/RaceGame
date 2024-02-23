@@ -39,7 +39,7 @@ class GameplayVC: UIViewController {
     
     private var elementSize: CGFloat = 0
     
-    private let defaultPadding: CGFloat = 100
+    private let defaultPadding: CGFloat = 50
     
     var screenHeight: CGFloat = 0
     
