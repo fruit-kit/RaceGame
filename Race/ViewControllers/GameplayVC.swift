@@ -70,6 +70,59 @@ class GameplayVC: UIViewController {
         self.barrier.contentMode = .scaleAspectFit
         
         self.rock.contentMode = .scaleAspectFit
+        
+        // MARK: lSwipe
+        
+        let lSwipe = UISwipeGestureRecognizer()
+        
+        lSwipe.direction = .left
+        
+        lSwipe.addTarget(self, action: #selector(moveCar))
+        
+        self.view.addGestureRecognizer(lSwipe)
+        
+        // MARK: rSwipe
+        
+        let rSwipe = UISwipeGestureRecognizer()
+        
+        rSwipe.direction = .right
+        
+        rSwipe.addTarget(self, action: #selector(moveCar))
+        
+        self.view.addGestureRecognizer(rSwipe)
+    }
+    
+    @objc func moveCar(sender: UISwipeGestureRecognizer) {
+        
+        switch sender.direction {
+            
+        case .left:
+            
+            if self.car.frame.origin.x == self.rightOriginCoordinate {
+                
+                self.car.frame.origin.x = self.centerOriginCoordinate
+                
+            } else if self.car.frame.origin.x == self.centerOriginCoordinate {
+                
+                self.car.frame.origin.x = self.leftOriginCoordinate
+                
+            }
+            
+        case .right:
+            
+            if self.car.frame.origin.x == self.leftOriginCoordinate {
+                
+                self.car.frame.origin.x = self.centerOriginCoordinate
+                
+            } else if self.car.frame.origin.x == self.centerOriginCoordinate {
+                
+                self.car.frame.origin.x = self.rightOriginCoordinate
+                
+            }
+            
+        default:
+            break
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -80,26 +133,6 @@ class GameplayVC: UIViewController {
         setupFrames()
         
         addSubviews()
-    }
-    
-    // MARK: - Actions
-    
-    @IBAction func PositionSegmentControl(_ sender: UISegmentedControl) {
-        
-        switch sender.selectedSegmentIndex {
-            
-        case 0:
-            moveCar(to: .left)
-            
-        case 1:
-            moveCar(to: .center)
-            
-        case 2:
-            moveCar(to: .right)
-            
-        default:
-            break
-        }
     }
     
     // MARK: - Private Methods
@@ -227,21 +260,6 @@ class GameplayVC: UIViewController {
         self.view.addSubview(self.road)
         
         self.view.sendSubviewToBack(self.road)
-    }
-    
-    private func moveCar(to position: ElementPosition) {
-        
-        switch position {
-            
-        case .left:
-            self.car.frame.origin.x = self.leftOriginCoordinate
-            
-        case .center:
-            self.car.frame.origin.x = self.centerOriginCoordinate
-            
-        case .right:
-            self.car.frame.origin.x = self.rightOriginCoordinate
-        }
     }
     
 }
