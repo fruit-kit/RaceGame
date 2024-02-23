@@ -61,6 +61,8 @@ class GameplayVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupSwipeGestureRecognizer()
+        
         self.road.contentMode = .scaleAspectFill
         
         self.car.contentMode = .scaleAspectFit
@@ -70,26 +72,6 @@ class GameplayVC: UIViewController {
         self.barrier.contentMode = .scaleAspectFit
         
         self.rock.contentMode = .scaleAspectFit
-        
-        // MARK: lSwipe
-        
-        let lSwipe = UISwipeGestureRecognizer()
-        
-        lSwipe.direction = .left
-        
-        lSwipe.addTarget(self, action: #selector(moveCar))
-        
-        self.view.addGestureRecognizer(lSwipe)
-        
-        // MARK: rSwipe
-        
-        let rSwipe = UISwipeGestureRecognizer()
-        
-        rSwipe.direction = .right
-        
-        rSwipe.addTarget(self, action: #selector(moveCar))
-        
-        self.view.addGestureRecognizer(rSwipe)
     }
     
     @objc func moveCar(sender: UISwipeGestureRecognizer) {
@@ -136,6 +118,39 @@ class GameplayVC: UIViewController {
     }
     
     // MARK: - Private Methods
+    
+    private func setupSwipeGestureRecognizer() {
+        
+        setupLeftSwipe()
+        
+        setupRightSwipe()
+    }
+    
+    // MARK: lSwipe
+    
+    private func setupLeftSwipe() {
+        
+        let lSwipe = UISwipeGestureRecognizer()
+        
+        lSwipe.direction = .left
+        
+        lSwipe.addTarget(self, action: #selector(moveCar))
+        
+        self.view.addGestureRecognizer(lSwipe)
+    }
+    
+    // MARK: rSwipe
+    
+    private func setupRightSwipe() {
+        
+        let rSwipe = UISwipeGestureRecognizer()
+        
+        rSwipe.direction = .right
+        
+        rSwipe.addTarget(self, action: #selector(moveCar))
+        
+        self.view.addGestureRecognizer(rSwipe)
+    }
     
     private func setupCoordinates() {
         
