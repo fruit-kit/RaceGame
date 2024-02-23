@@ -63,15 +63,7 @@ class GameplayVC: UIViewController {
         
         setupSwipeGestureRecognizer()
         
-        self.road.contentMode = .scaleAspectFill
-        
-        self.car.contentMode = .scaleAspectFit
-        
-        self.tree.contentMode = .scaleAspectFit
-        
-        self.barrier.contentMode = .scaleAspectFit
-        
-        self.rock.contentMode = .scaleAspectFit
+        setupContentModeForImages()
     }
     
     @objc func moveCar(sender: UISwipeGestureRecognizer) {
@@ -118,6 +110,19 @@ class GameplayVC: UIViewController {
     }
     
     // MARK: - Private Methods
+
+    private func setupContentModeForImages() {
+        
+        self.road.contentMode = .scaleAspectFill
+        
+        self.car.contentMode = .scaleAspectFit
+        
+        self.tree.contentMode = .scaleAspectFit
+        
+        self.barrier.contentMode = .scaleAspectFit
+        
+        self.rock.contentMode = .scaleAspectFit
+    }
     
     private func setupSwipeGestureRecognizer() {
         
