@@ -17,13 +17,13 @@ class MenuVC: UIViewController {
     
     override func viewDidLoad() {
         
+        super.viewDidLoad()
+        
         setupTitle()
         
         setupBackgroundImage()
         
         setupStartButton()
-        
-        super.viewDidLoad()
     }
     
     // MARK: - Private Methods

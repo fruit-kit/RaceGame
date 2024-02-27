@@ -59,6 +59,7 @@ class GameplayVC: UIViewController {
     // MARK: - View Lifecycle
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
         setupSwipeGestureRecognizer()
@@ -66,40 +67,8 @@ class GameplayVC: UIViewController {
         setupContentModeForImages()
     }
     
-    @objc func moveCar(sender: UISwipeGestureRecognizer) {
-        
-        switch sender.direction {
-            
-        case .left:
-            
-            if self.car.frame.origin.x == self.rightOriginCoordinate {
-                
-                self.car.frame.origin.x = self.centerOriginCoordinate
-                
-            } else if self.car.frame.origin.x == self.centerOriginCoordinate {
-                
-                self.car.frame.origin.x = self.leftOriginCoordinate
-                
-            }
-            
-        case .right:
-            
-            if self.car.frame.origin.x == self.leftOriginCoordinate {
-                
-                self.car.frame.origin.x = self.centerOriginCoordinate
-                
-            } else if self.car.frame.origin.x == self.centerOriginCoordinate {
-                
-                self.car.frame.origin.x = self.rightOriginCoordinate
-                
-            }
-            
-        default:
-            break
-        }
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
+        
         super.viewWillAppear(animated)
         
         setupCoordinates()
@@ -109,8 +78,53 @@ class GameplayVC: UIViewController {
         addSubviews()
     }
     
+    @objc func moveCar(sender: UISwipeGestureRecognizer) {
+        
+        var destinationCoordinate: CGFloat = 0
+        
+        switch sender.direction {
+            
+        case .left:
+            
+            if self.car.frame.origin.x == self.rightOriginCoordinate {
+                
+                destinationCoordinate = self.centerOriginCoordinate
+                
+            } else if self.car.frame.origin.x == self.centerOriginCoordinate {
+                
+                destinationCoordinate = self.leftOriginCoordinate
+                
+            } else if self.car.frame.origin.x == self.leftOriginCoordinate {
+                
+                destinationCoordinate = self.leftOriginCoordinate
+            }
+            
+        case .right:
+            
+            if self.car.frame.origin.x == self.leftOriginCoordinate {
+                
+                destinationCoordinate = self.centerOriginCoordinate
+                
+            } else if self.car.frame.origin.x == self.centerOriginCoordinate {
+                
+                destinationCoordinate = self.rightOriginCoordinate
+                
+            } else if self.car.frame.origin.x == self.rightOriginCoordinate {
+                
+                destinationCoordinate = self.rightOriginCoordinate
+            }
+            
+        default:
+            break
+        }
+        
+        UIView.animate(withDuration: 0.3) { [weak self] in
+            self?.car.frame.origin.x = destinationCoordinate
+        }
+    }
+    
     // MARK: - Private Methods
-
+    
     private func setupContentModeForImages() {
         
         self.road.contentMode = .scaleAspectFill
@@ -239,7 +253,7 @@ class GameplayVC: UIViewController {
         self.barrier.layer.shadowRadius = 15
         
         self.barrier.layer.shadowOffset = CGSize(width: 0, height: 35)
-
+        
     }
     
     private func setupRock() {

@@ -21,13 +21,13 @@ class SettingsVC: UIViewController {
     
     override func viewDidLoad() {
 
+        super.viewDidLoad()
+        
         setupTitle()
         
         setupBackgroundImage()
         
         setupTableView()
-        
-        super.viewDidLoad()
     }
     
 

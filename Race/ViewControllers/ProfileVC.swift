@@ -13,11 +13,11 @@ class ProfileVC: UIViewController {
     
     override func viewDidLoad() {
 
+        super.viewDidLoad()
+        
         setupTitle()
         
         setupBackgroundImage()
-        
-        super.viewDidLoad()
     }
 
     // MARK: - Private Methods
