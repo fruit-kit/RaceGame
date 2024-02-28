@@ -265,7 +265,7 @@ class GameplayVC: UIViewController {
     
     private func setupRock() {
         
-        let yCoordinateOfRock = (self.topSafeAreaPadding + self.navigationBarHeight)
+        let yCoordinateOfRock = -elementSize * 2
         
         self.rock.frame = CGRect(x: self.rightOriginCoordinate,
                                  y: yCoordinateOfRock,
@@ -308,6 +308,8 @@ class GameplayVC: UIViewController {
         animateTree()
         
         animateBarrier()
+        
+        animateRock()
     }
     
     private func animateTree() {
@@ -321,6 +323,13 @@ class GameplayVC: UIViewController {
         
         UIView.animate(withDuration: 5, delay: 2.5, options: [.curveLinear, .repeat]) { [weak self] in
             self?.barrier.frame.origin.y = self?.screenHeight ?? 999
+        }
+    }
+    
+    private func animateRock() {
+        
+        UIView.animate(withDuration: 5, delay: 3.5, options: [.curveLinear, .repeat]) { [weak self] in
+            self?.rock.frame.origin.y = self?.screenHeight ?? 999
         }
     }
     
