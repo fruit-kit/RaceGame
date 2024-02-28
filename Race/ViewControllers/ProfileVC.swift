@@ -8,23 +8,24 @@
 import UIKit
 
 class ProfileVC: UIViewController {
-
+    
     // MARK: - View Lifecycle
     
     override func viewDidLoad() {
-
+        
         super.viewDidLoad()
         
         setupTitle()
         
         setupBackgroundImage()
     }
-
+    
     // MARK: - Private Methods
     
     private func setupTitle() {
         
         self.title = "Profile"
+        
         self.navigationController?.navigationBar.prefersLargeTitles = true
     }
     
@@ -33,11 +34,15 @@ class ProfileVC: UIViewController {
         guard let backgroundImage = UIImage(named: "bg-profile") else { return }
         
         let backgroundImageView = UIImageView(image: backgroundImage)
+        
         backgroundImageView.contentMode = .scaleAspectFill
+        
         backgroundImageView.frame = self.view.bounds
+        
         backgroundImageView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         
         self.view.addSubview(backgroundImageView)
+        
         self.view.sendSubviewToBack(backgroundImageView)
     }
     

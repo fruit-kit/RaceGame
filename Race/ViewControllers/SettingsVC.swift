@@ -12,7 +12,7 @@ class SettingsVC: UIViewController {
     // MARK: - Properties
     
     private let settings = SettingsManager.shared.settings
-
+    
     // MARK: - Outlets
     
     @IBOutlet weak var tableView: UITableView!
@@ -20,7 +20,7 @@ class SettingsVC: UIViewController {
     // MARK: - View Lifecycle
     
     override func viewDidLoad() {
-
+        
         super.viewDidLoad()
         
         setupTitle()
@@ -30,12 +30,13 @@ class SettingsVC: UIViewController {
         setupTableView()
     }
     
-
+    
     // MARK: - Private Methods
     
     private func setupTitle() {
         
         self.title = "Settings"
+        
         self.navigationController?.navigationBar.prefersLargeTitles = true
     }
     
@@ -44,17 +45,22 @@ class SettingsVC: UIViewController {
         guard let backgroundImage = UIImage(named: "bg-settings") else { return }
         
         let backgroundImageView = UIImageView(image: backgroundImage)
+        
         backgroundImageView.contentMode = .scaleAspectFill
+        
         backgroundImageView.frame = self.view.bounds
+        
         backgroundImageView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         
         self.view.addSubview(backgroundImageView)
+        
         self.view.sendSubviewToBack(backgroundImageView)
     }
     
     private func setupTableView() {
         
         self.tableView.delegate = self
+        
         self.tableView.dataSource = self
         
         registerCell()
@@ -63,9 +69,10 @@ class SettingsVC: UIViewController {
     private func registerCell() {
         
         let cellNib = UINib(nibName: "TableViewCell", bundle: Bundle.main)
+        
         tableView.register(cellNib, forCellReuseIdentifier: "TableViewCell")
     }
-
+    
 }
 
 // MARK: - Extensions
