@@ -319,7 +319,7 @@ class GameplayVC: UIViewController {
     
     private func animateBarrier() {
         
-        UIView.animate(withDuration: 5, delay: 1, options: [.curveLinear, .repeat]) { [weak self] in
+        UIView.animate(withDuration: 5, delay: 2.5, options: [.curveLinear, .repeat]) { [weak self] in
             self?.barrier.frame.origin.y = self?.screenHeight ?? 999
         }
     }
