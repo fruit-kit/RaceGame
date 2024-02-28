@@ -246,7 +246,7 @@ class GameplayVC: UIViewController {
     
     private func setupBarrier() {
         
-        let yCoordinateOfBarrier = (self.topSafeAreaPadding + self.navigationBarHeight) * 2
+        let yCoordinateOfBarrier = -elementSize * 2
         
         self.barrier.frame = CGRect(x: self.centerOriginCoordinate,
                                     y: yCoordinateOfBarrier,
@@ -306,12 +306,21 @@ class GameplayVC: UIViewController {
     private func animateObstacles() {
         
         animateTree()
+        
+        animateBarrier()
     }
     
     private func animateTree() {
         
         UIView.animate(withDuration: 5, delay: 1, options: [.curveLinear, .repeat]) { [weak self] in
             self?.tree.frame.origin.y = self?.screenHeight ?? 999
+        }
+    }
+    
+    private func animateBarrier() {
+        
+        UIView.animate(withDuration: 5, delay: 1, options: [.curveLinear, .repeat]) { [weak self] in
+            self?.barrier.frame.origin.y = self?.screenHeight ?? 999
         }
     }
     
