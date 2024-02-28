@@ -58,6 +58,12 @@ class GameplayVC: UIViewController {
     
     private let speed: CGFloat = 60
     
+    private var treeRandomTimeInterval = TimeInterval(Int.random(in: 1...2))
+    
+    private var barrierRandomTimeInterval = TimeInterval(Int.random(in: 3...4))
+    
+    private var rockRandomTimeInterval = TimeInterval(Int.random(in: 5...6))
+    
     // MARK: - View Lifecycle
     
     override func viewDidLoad() {
@@ -322,7 +328,7 @@ class GameplayVC: UIViewController {
         
         let treeT = treeS / treeV
         
-        UIView.animate(withDuration: treeT, delay: 0, options: [.curveLinear, .repeat]) { [weak self] in
+        UIView.animate(withDuration: treeT, delay: self.treeRandomTimeInterval, options: [.curveLinear, .repeat]) { [weak self] in
             self?.tree.frame.origin.y = self?.screenHeight ?? 999
         }
     }
@@ -335,7 +341,7 @@ class GameplayVC: UIViewController {
         
         let barrierT = barrierS / barrierV
         
-        UIView.animate(withDuration: barrierT, delay: 0, options: [.curveLinear, .repeat]) { [weak self] in
+        UIView.animate(withDuration: barrierT, delay: self.barrierRandomTimeInterval, options: [.curveLinear, .repeat]) { [weak self] in
             self?.barrier.frame.origin.y = self?.screenHeight ?? 999
         }
     }
@@ -348,7 +354,7 @@ class GameplayVC: UIViewController {
         
         let rockT = rockS / rockV
         
-        UIView.animate(withDuration: rockT, delay: 0, options: [.curveLinear, .repeat]) { [weak self] in
+        UIView.animate(withDuration: rockT, delay: self.rockRandomTimeInterval, options: [.curveLinear, .repeat]) { [weak self] in
             self?.rock.frame.origin.y = self?.screenHeight ?? 999
         }
     }
