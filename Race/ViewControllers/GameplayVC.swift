@@ -328,7 +328,7 @@ class GameplayVC: UIViewController {
     
     private func animateRock() {
         
-        UIView.animate(withDuration: 5, delay: 3.5, options: [.curveLinear, .repeat]) { [weak self] in
+        UIView.animate(withDuration: 5, delay: 4, options: [.curveLinear, .repeat]) { [weak self] in
             self?.rock.frame.origin.y = self?.screenHeight ?? 999
         }
     }
