@@ -322,7 +322,7 @@ class GameplayVC: UIViewController {
         
         let treeT = treeS / treeV
         
-        UIView.animate(withDuration: treeT, delay: 0.5, options: [.curveLinear, .repeat]) { [weak self] in
+        UIView.animate(withDuration: treeT, delay: 0, options: [.curveLinear, .repeat]) { [weak self] in
             self?.tree.frame.origin.y = self?.screenHeight ?? 999
         }
     }
@@ -335,7 +335,7 @@ class GameplayVC: UIViewController {
         
         let barrierT = barrierS / barrierV
         
-        UIView.animate(withDuration: barrierT, delay: 1.5, options: [.curveLinear, .repeat]) { [weak self] in
+        UIView.animate(withDuration: barrierT, delay: 0, options: [.curveLinear, .repeat]) { [weak self] in
             self?.barrier.frame.origin.y = self?.screenHeight ?? 999
         }
     }
@@ -348,7 +348,7 @@ class GameplayVC: UIViewController {
         
         let rockT = rockS / rockV
         
-        UIView.animate(withDuration: rockT, delay: 2.5, options: [.curveLinear, .repeat]) { [weak self] in
+        UIView.animate(withDuration: rockT, delay: 0, options: [.curveLinear, .repeat]) { [weak self] in
             self?.rock.frame.origin.y = self?.screenHeight ?? 999
         }
     }
