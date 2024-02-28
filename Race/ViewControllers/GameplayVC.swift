@@ -78,6 +78,13 @@ class GameplayVC: UIViewController {
         addSubviews()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        
+        super.viewDidAppear(animated)
+        
+        animateObstacles()
+    }
+    
     @objc func moveCar(sender: UISwipeGestureRecognizer) {
         
         var destinationCoordinate: CGFloat = 0
@@ -221,7 +228,7 @@ class GameplayVC: UIViewController {
     
     private func setupTree() {
         
-        let yCoordinateOfTree = (self.topSafeAreaPadding + self.navigationBarHeight) * 3
+        let yCoordinateOfTree = -self.elementSize * 2
         
         self.tree.frame = CGRect(x: self.leftOriginCoordinate,
                                  y: yCoordinateOfTree,
@@ -294,6 +301,18 @@ class GameplayVC: UIViewController {
         self.view.addSubview(self.road)
         
         self.view.sendSubviewToBack(self.road)
+    }
+    
+    private func animateObstacles() {
+        
+        animateTree()
+    }
+    
+    private func animateTree() {
+        
+        UIView.animate(withDuration: 5, delay: 1, options: [.curveLinear, .repeat]) { [weak self] in
+            self?.tree.frame.origin.y = self?.screenHeight ?? 999
+        }
     }
     
 }
