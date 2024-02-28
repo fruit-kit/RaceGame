@@ -56,6 +56,8 @@ class GameplayVC: UIViewController {
         case left, center, right
     }
     
+    private let speed: CGFloat = 60
+    
     // MARK: - View Lifecycle
     
     override func viewDidLoad() {
@@ -314,21 +316,39 @@ class GameplayVC: UIViewController {
     
     private func animateTree() {
         
-        UIView.animate(withDuration: 5, delay: 1, options: [.curveLinear, .repeat]) { [weak self] in
+        let treeS = self.screenHeight / 2.5
+        
+        let treeV = self.speed
+        
+        let treeT = treeS / treeV
+        
+        UIView.animate(withDuration: treeT, delay: 0.5, options: [.curveLinear, .repeat]) { [weak self] in
             self?.tree.frame.origin.y = self?.screenHeight ?? 999
         }
     }
     
     private func animateBarrier() {
         
-        UIView.animate(withDuration: 5, delay: 2.5, options: [.curveLinear, .repeat]) { [weak self] in
+        let barrierS = self.screenHeight / 2.5
+        
+        let barrierV = self.speed
+        
+        let barrierT = barrierS / barrierV
+        
+        UIView.animate(withDuration: barrierT, delay: 1.5, options: [.curveLinear, .repeat]) { [weak self] in
             self?.barrier.frame.origin.y = self?.screenHeight ?? 999
         }
     }
     
     private func animateRock() {
         
-        UIView.animate(withDuration: 5, delay: 4, options: [.curveLinear, .repeat]) { [weak self] in
+        let rockS = self.screenHeight / 2.5
+        
+        let rockV = self.speed
+        
+        let rockT = rockS / rockV
+        
+        UIView.animate(withDuration: rockT, delay: 2.5, options: [.curveLinear, .repeat]) { [weak self] in
             self?.rock.frame.origin.y = self?.screenHeight ?? 999
         }
     }
