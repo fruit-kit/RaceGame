@@ -133,7 +133,7 @@ class GameplayVC: UIViewController {
             break
         }
         
-        UIView.animate(withDuration: 0.3, delay: 0, options: [.curveEaseIn]) { [weak self] in
+        UIView.animate(withDuration: 0.2, delay: 0, options: [.curveEaseIn]) { [weak self] in
             self?.car.frame.origin.x = destinationCoordinate
         }
     }
