@@ -31,14 +31,34 @@
                     <view key="view" contentMode="scaleToFill" id="rxs-un-aX7">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="ehP-eh-ZhZ" customClass="LottieAnimationView" customModule="Lottie">
+                                <rect key="frame" x="71.666666666666686" y="163" width="250" height="250"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ehP-eh-ZhZ" secondAttribute="height" id="8bf-9H-3ux"/>
+                                    <constraint firstAttribute="width" constant="250" id="Vri-sW-RNV"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="profile-animation"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Osn-SP-qAl"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ehP-eh-ZhZ" firstAttribute="top" secondItem="Osn-SP-qAl" secondAttribute="top" constant="8" id="5bk-36-He2"/>
+                            <constraint firstItem="ehP-eh-ZhZ" firstAttribute="centerX" secondItem="rxs-un-aX7" secondAttribute="centerX" id="lHw-yI-2aL"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Ghg-2Z-RZk"/>
+                    <connections>
+                        <outlet property="animationView" destination="ehP-eh-ZhZ" id="rHz-u4-Dh3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5NT-96-A9l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1813" y="-502"/>
+            <point key="canvasLocation" x="1812.9770992366412" y="-502.11267605633805"/>
         </scene>
         <!--Menu-->
         <scene sceneID="tne-QT-ifu">

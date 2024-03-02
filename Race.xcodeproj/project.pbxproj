@@ -22,6 +22,7 @@
 		CCCF66A52B7E482F00A54135 /* StatsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCF66A42B7E482F00A54135 /* StatsVC.swift */; };
 		CCCF66A72B7F873B00A54135 /* GameplayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCF66A62B7F873B00A54135 /* GameplayVC.swift */; };
 		CCE29CE92B920C0E00D64314 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = CCE29CE82B920C0E00D64314 /* Lottie */; };
+		CCE29CFF2B921D6400D64314 /* profile-animation.json in Resources */ = {isa = PBXBuildFile; fileRef = CCE29CFE2B921D6400D64314 /* profile-animation.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		CCC8084E2B7BBE02006D013E /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		CCCF66A42B7E482F00A54135 /* StatsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsVC.swift; sourceTree = "<group>"; };
 		CCCF66A62B7F873B00A54135 /* GameplayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameplayVC.swift; sourceTree = "<group>"; };
+		CCE29CFE2B921D6400D64314 /* profile-animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "profile-animation.json"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				CCC7B49F2B764CD0009AF65C /* TableViewCell.xib */,
 				CCC7B4882B73EFA9009AF65C /* Main.storyboard */,
 				CCC7B48D2B73EFAB009AF65C /* LaunchScreen.storyboard */,
+				CCE29CFE2B921D6400D64314 /* profile-animation.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 			files = (
 				CCC7B48F2B73EFAB009AF65C /* LaunchScreen.storyboard in Resources */,
 				CCC7B4A12B764CD0009AF65C /* TableViewCell.xib in Resources */,
+				CCE29CFF2B921D6400D64314 /* profile-animation.json in Resources */,
 				CCC7B48C2B73EFAB009AF65C /* Assets.xcassets in Resources */,
 				CCC7B48A2B73EFA9009AF65C /* Main.storyboard in Resources */,
 			);

@@ -10,11 +10,15 @@ import Lottie
 
 class ProfileVC: UIViewController {
     
+    @IBOutlet weak var animationView: LottieAnimationView!
+    
     // MARK: - View Lifecycle
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
+        setupLottieAnimation()
         
         setupTitle()
         
@@ -22,6 +26,17 @@ class ProfileVC: UIViewController {
     }
     
     // MARK: - Private Methods
+    
+    private func setupLottieAnimation() {
+        
+            self.animationView.contentMode = .scaleAspectFit
+            
+            self.animationView.loopMode = .loop
+            
+            self.animationView.animationSpeed = 0.5
+            
+            self.animationView.play()
+    }
     
     private func setupTitle() {
         
