@@ -12,6 +12,8 @@ class ProfileVC: UIViewController {
     
     @IBOutlet weak var animationView: LottieAnimationView!
     
+    @IBOutlet weak var greetingsLabel: UILabel!
+    
     // MARK: - View Lifecycle
     
     override func viewDidLoad() {
@@ -22,10 +24,21 @@ class ProfileVC: UIViewController {
         
         setupTitle()
         
+        setupGreetingsLabel()
+        
         setupBackgroundImage()
     }
     
     // MARK: - Private Methods
+    
+    fileprivate func setupGreetingsLabel() {
+        
+        self.greetingsLabel.text = "Hello, player!"
+        
+        self.greetingsLabel.font = .boldSystemFont(ofSize: 30)
+        
+        self.greetingsLabel.textColor = .white
+    }
     
     private func setupLottieAnimation() {
         

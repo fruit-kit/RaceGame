@@ -43,17 +43,26 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="profile-animation"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, Player!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3VU-9o-FAh">
+                                <rect key="frame" x="147" y="421" width="99.333333333333314" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Osn-SP-qAl"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ehP-eh-ZhZ" firstAttribute="top" secondItem="Osn-SP-qAl" secondAttribute="top" constant="8" id="5bk-36-He2"/>
+                            <constraint firstItem="3VU-9o-FAh" firstAttribute="centerX" secondItem="rxs-un-aX7" secondAttribute="centerX" id="cSC-Gj-thu"/>
                             <constraint firstItem="ehP-eh-ZhZ" firstAttribute="centerX" secondItem="rxs-un-aX7" secondAttribute="centerX" id="lHw-yI-2aL"/>
+                            <constraint firstItem="3VU-9o-FAh" firstAttribute="top" secondItem="ehP-eh-ZhZ" secondAttribute="bottom" constant="8" id="xrS-Xy-RcR"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Ghg-2Z-RZk"/>
                     <connections>
                         <outlet property="animationView" destination="ehP-eh-ZhZ" id="rHz-u4-Dh3"/>
+                        <outlet property="greetingsLabel" destination="3VU-9o-FAh" id="biU-Ur-62S"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5NT-96-A9l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
