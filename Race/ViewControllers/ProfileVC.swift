@@ -10,6 +10,8 @@ import Lottie
 
 class ProfileVC: UIViewController {
     
+    // MARK: - Outlets
+    
     @IBOutlet weak var animationView: LottieAnimationView!
     
     @IBOutlet weak var greetingsLabel: UILabel!
@@ -29,9 +31,15 @@ class ProfileVC: UIViewController {
         setupBackgroundImage()
     }
     
+    // MARK: - Actions
+    
+    @IBAction func logInButtonPressed(_ sender: UIButton) {
+        
+    }
+    
     // MARK: - Private Methods
     
-    fileprivate func setupGreetingsLabel() {
+    private func setupGreetingsLabel() {
         
         self.greetingsLabel.text = "Hello, player!"
         
