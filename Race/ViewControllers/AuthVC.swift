@@ -19,6 +19,8 @@ class AuthVC: UIViewController {
         super.viewDidLoad()
 
         setupAuthTitleLabel()
+        
+        setupTextFields()
     }
     
     private func setupAuthTitleLabel() {
@@ -26,6 +28,13 @@ class AuthVC: UIViewController {
         self.authTitleLabel.text = "Authorization"
         
         self.authTitleLabel.font = .boldSystemFont(ofSize: 30)
+    }
+    
+    private func setupTextFields() {
+        
+        self.firstNameTextField.placeholder = "First name"
+        
+        self.secondNameTextField.placeholder = "Second name"
     }
 
 }
