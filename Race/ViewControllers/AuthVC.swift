@@ -15,12 +15,18 @@ class AuthVC: UIViewController {
     
     @IBOutlet weak var secondNameTextField: UITextField!
     
+    private var username = "user"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupAuthTitleLabel()
         
         setupTextFields()
+        
+        self.firstNameTextField.delegate = self
+        
+        self.secondNameTextField.delegate = self
     }
     
     private func setupAuthTitleLabel() {
@@ -41,4 +47,28 @@ class AuthVC: UIViewController {
         self.secondNameTextField.keyboardType = .alphabet
     }
 
+}
+
+extension AuthVC: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        if textField == self.firstNameTextField {
+            self.secondNameTextField.becomeFirstResponder()
+        } else if textField == self.secondNameTextField {
+            self.secondNameTextField.resignFirstResponder()
+        }
+        
+        return true
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        
+        if textField == self.firstNameTextField {
+            self.username = (textField.text ?? "user") + " "
+        } else if textField == self.secondNameTextField {
+            self.username += (textField.text ?? "")
+        }
+    }
+    
 }
