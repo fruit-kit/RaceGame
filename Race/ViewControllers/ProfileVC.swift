@@ -31,12 +31,6 @@ class ProfileVC: UIViewController {
         setupBackgroundImage()
     }
     
-    // MARK: - Actions
-    
-    @IBAction func logInButtonPressed(_ sender: UIButton) {
-    
-    }
-    
     private func setupGreetingsLabel() {
         
         self.greetingsLabel.text = "Hello, Player!"

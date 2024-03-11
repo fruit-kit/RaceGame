@@ -60,9 +60,6 @@
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
                                     <color key="baseBackgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
-                                <connections>
-                                    <action selector="logInButtonPressed:" destination="83G-aE-JOu" eventType="touchUpInside" id="bqj-KR-B2j"/>
-                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Osn-SP-qAl"/>
