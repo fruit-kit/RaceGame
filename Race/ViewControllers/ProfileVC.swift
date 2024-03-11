@@ -34,31 +34,7 @@ class ProfileVC: UIViewController {
     // MARK: - Actions
     
     @IBAction func logInButtonPressed(_ sender: UIButton) {
-        
-        presentLoginAlert()
-    }
     
-    // MARK: - Private Methods
-    
-    private func presentLoginAlert() {
-        
-        let alert = UIAlertController(title: nil, message: "Log in with your username", preferredStyle: .alert)
-        
-        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
-            self.greetingsLabel.text = "Hello, \(alert.textFields?.first?.text ?? "Hello,  Player")!"
-        }
-        
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
-        
-        alert.addTextField { textField in
-            textField.placeholder = "Username"
-        }
-        
-        alert.addAction(okAction)
-        
-        alert.addAction(cancelAction)
-        
-        self.present(alert, animated: true)
     }
     
     private func setupGreetingsLabel() {
