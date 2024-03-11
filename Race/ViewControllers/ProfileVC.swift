@@ -40,7 +40,7 @@ class ProfileVC: UIViewController {
     
     // MARK: - Private Methods
     
-   private func presentLoginAlert() {
+    private func presentLoginAlert() {
         
         let alert = UIAlertController(title: nil, message: "Log in with your username", preferredStyle: .alert)
         
@@ -55,7 +55,7 @@ class ProfileVC: UIViewController {
         }
         
         alert.addAction(okAction)
-       
+        
         alert.addAction(cancelAction)
         
         self.present(alert, animated: true)
@@ -72,13 +72,13 @@ class ProfileVC: UIViewController {
     
     private func setupLottieAnimation() {
         
-            self.animationView.contentMode = .scaleAspectFit
-            
-            self.animationView.loopMode = .loop
-            
-            self.animationView.animationSpeed = 0.5
-            
-            self.animationView.play()
+        self.animationView.contentMode = .scaleAspectFit
+        
+        self.animationView.loopMode = .loop
+        
+        self.animationView.animationSpeed = 0.5
+        
+        self.animationView.play()
     }
     
     private func setupTitle() {
