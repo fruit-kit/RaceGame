@@ -9,6 +9,8 @@ import UIKit
 
 class AuthVC: UIViewController {
 
+    @IBOutlet weak var AuthTitleLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

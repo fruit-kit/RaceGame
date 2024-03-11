@@ -22,7 +22,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hUM-0j-w0e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2585" y="31"/>
+            <point key="canvasLocation" x="2592" y="35"/>
         </scene>
         <!--ProfileVC-->
         <scene sceneID="KhJ-4u-VpQ">
@@ -60,6 +60,9 @@
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
                                     <color key="baseBackgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="e0t-nj-n8Q" kind="presentation" id="qpy-xP-DDk"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Osn-SP-qAl"/>
@@ -88,15 +91,30 @@
             <objects>
                 <viewController id="e0t-nj-n8Q" customClass="AuthVC" customModule="Race" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ois-cT-5tV">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Authorization" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zl1-tL-jMn">
+                                <rect key="frame" x="110.33333333333333" y="16" width="172.33333333333337" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="fir-qH-pMR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zl1-tL-jMn" firstAttribute="centerX" secondItem="ois-cT-5tV" secondAttribute="centerX" id="UY4-bf-OfX"/>
+                            <constraint firstItem="zl1-tL-jMn" firstAttribute="top" secondItem="fir-qH-pMR" secondAttribute="top" constant="16" id="rz1-sc-dZP"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="AuthTitleLabel" destination="zl1-tL-jMn" id="Min-93-Ly7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xSd-61-mAc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2584" y="-653"/>
+            <point key="canvasLocation" x="2593" y="-654"/>
         </scene>
         <!--Menu-->
         <scene sceneID="tne-QT-ifu">
