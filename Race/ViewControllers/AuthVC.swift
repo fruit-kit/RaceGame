@@ -34,7 +34,11 @@ class AuthVC: UIViewController {
         
         self.firstNameTextField.placeholder = "First name"
         
+        self.firstNameTextField.keyboardType = .alphabet
+        
         self.secondNameTextField.placeholder = "Second name"
+        
+        self.secondNameTextField.keyboardType = .alphabet
     }
 
 }
