@@ -95,21 +95,39 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Authorization" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zl1-tL-jMn">
-                                <rect key="frame" x="110.33333333333333" y="16" width="172.33333333333337" height="36"/>
+                                <rect key="frame" x="110.33333333333333" y="8" width="172.33333333333337" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yM8-d3-1kH">
+                                <rect key="frame" x="16" y="52" width="361" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IqQ-we-7NS">
+                                <rect key="frame" x="16" y="94" width="361" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fir-qH-pMR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="IqQ-we-7NS" firstAttribute="top" secondItem="yM8-d3-1kH" secondAttribute="bottom" constant="8" id="7In-CZ-93f"/>
+                            <constraint firstItem="fir-qH-pMR" firstAttribute="trailing" secondItem="IqQ-we-7NS" secondAttribute="trailing" constant="16" id="Nsn-wd-Lbs"/>
                             <constraint firstItem="zl1-tL-jMn" firstAttribute="centerX" secondItem="ois-cT-5tV" secondAttribute="centerX" id="UY4-bf-OfX"/>
-                            <constraint firstItem="zl1-tL-jMn" firstAttribute="top" secondItem="fir-qH-pMR" secondAttribute="top" constant="16" id="rz1-sc-dZP"/>
+                            <constraint firstItem="IqQ-we-7NS" firstAttribute="leading" secondItem="fir-qH-pMR" secondAttribute="leading" constant="16" id="Xtn-SH-vC0"/>
+                            <constraint firstItem="fir-qH-pMR" firstAttribute="trailing" secondItem="yM8-d3-1kH" secondAttribute="trailing" constant="16" id="asO-ct-z9N"/>
+                            <constraint firstItem="yM8-d3-1kH" firstAttribute="top" secondItem="zl1-tL-jMn" secondAttribute="bottom" constant="8" id="l5c-uI-AAg"/>
+                            <constraint firstItem="zl1-tL-jMn" firstAttribute="top" secondItem="fir-qH-pMR" secondAttribute="top" constant="8" id="rz1-sc-dZP"/>
+                            <constraint firstItem="yM8-d3-1kH" firstAttribute="leading" secondItem="fir-qH-pMR" secondAttribute="leading" constant="16" id="sE3-ex-na4"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="authTitleLabel" destination="zl1-tL-jMn" id="Rae-V7-CSr"/>
+                        <outlet property="firstNameTextField" destination="yM8-d3-1kH" id="qNJ-ys-g7B"/>
+                        <outlet property="secondNameTextField" destination="IqQ-we-7NS" id="m29-aT-cGU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xSd-61-mAc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

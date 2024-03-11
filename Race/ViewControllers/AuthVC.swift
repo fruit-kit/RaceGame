@@ -11,6 +11,10 @@ class AuthVC: UIViewController {
 
     @IBOutlet weak var authTitleLabel: UILabel!
     
+    @IBOutlet weak var firstNameTextField: UITextField!
+    
+    @IBOutlet weak var secondNameTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
