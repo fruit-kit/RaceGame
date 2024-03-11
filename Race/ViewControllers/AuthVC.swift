@@ -9,11 +9,19 @@ import UIKit
 
 class AuthVC: UIViewController {
 
-    @IBOutlet weak var AuthTitleLabel: UILabel!
+    @IBOutlet weak var authTitleLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupAuthTitleLabel()
+    }
+    
+    private func setupAuthTitleLabel() {
+        
+        self.authTitleLabel.text = "Authorization"
+        
+        self.authTitleLabel.font = .boldSystemFont(ofSize: 30)
     }
 
 }

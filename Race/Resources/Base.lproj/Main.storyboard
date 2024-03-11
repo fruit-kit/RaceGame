@@ -109,7 +109,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="AuthTitleLabel" destination="zl1-tL-jMn" id="Min-93-Ly7"/>
+                        <outlet property="authTitleLabel" destination="zl1-tL-jMn" id="Rae-V7-CSr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xSd-61-mAc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
