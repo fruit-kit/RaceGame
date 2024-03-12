@@ -41,12 +41,18 @@ class ProfileVC: UIViewController {
             object: nil)
     }
     
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
     @objc func updateUsername(_ notification: Notification) {
         
         if let username = notification.userInfo?["username"] {
             self.greetingsLabel.text = "Hello, \(username)!"
         }
     }
+    
+    // MARK: - Private Methods
     
     private func setupGreetingsLabel() {
         

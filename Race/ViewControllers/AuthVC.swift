@@ -37,6 +37,10 @@ class AuthVC: UIViewController {
         setupBackgroundImage()
     }
     
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
     // MARK: - Private Methods
     
     private func setupBackgroundImage() {
