@@ -99,6 +99,7 @@ extension AuthVC: UITextFieldDelegate {
             self.username = (textField.text ?? "user") + " "
         } else if textField == self.secondNameTextField {
             self.username += (textField.text ?? "")
+            self.dismiss(animated: true)
         }
         
         NotificationCenter.default.post(
