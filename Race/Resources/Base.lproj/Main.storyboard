@@ -113,7 +113,7 @@
                             </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fir-qH-pMR"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
                             <constraint firstItem="IqQ-we-7NS" firstAttribute="top" secondItem="yM8-d3-1kH" secondAttribute="bottom" constant="8" id="7In-CZ-93f"/>
                             <constraint firstItem="fir-qH-pMR" firstAttribute="trailing" secondItem="IqQ-we-7NS" secondAttribute="trailing" constant="16" id="Nsn-wd-Lbs"/>
@@ -296,6 +296,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

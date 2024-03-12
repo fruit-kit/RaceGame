@@ -8,6 +8,8 @@
 import UIKit
 
 class AuthVC: UIViewController {
+    
+    // MARK: - Outlets
 
     @IBOutlet weak var authTitleLabel: UILabel!
     
@@ -15,7 +17,11 @@ class AuthVC: UIViewController {
     
     @IBOutlet weak var secondNameTextField: UITextField!
     
+    // MARK: - Properties
+    
     private var username = "user"
+    
+    // MARK: - View Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +33,27 @@ class AuthVC: UIViewController {
         self.firstNameTextField.delegate = self
         
         self.secondNameTextField.delegate = self
+        
+        setupBackgroundImage()
+    }
+    
+    // MARK: - Private Methods
+    
+    private func setupBackgroundImage() {
+        
+        guard let backgroundImage = UIImage(named: "bg-profile") else { return }
+        
+        let backgroundImageView = UIImageView(image: backgroundImage)
+        
+        backgroundImageView.contentMode = .scaleAspectFill
+        
+        backgroundImageView.frame = self.view.bounds
+        
+        backgroundImageView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        
+        self.view.addSubview(backgroundImageView)
+        
+        self.view.sendSubviewToBack(backgroundImageView)
     }
     
     private func setupAuthTitleLabel() {
@@ -48,6 +75,10 @@ class AuthVC: UIViewController {
     }
 
 }
+
+// MARK: - Extensions
+
+// MARK: - Delegates
 
 extension AuthVC: UITextFieldDelegate {
     
