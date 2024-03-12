@@ -43,14 +43,14 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="profile-animation"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, Player!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3VU-9o-FAh">
-                                <rect key="frame" x="147" y="421" width="99.333333333333314" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, Player!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3VU-9o-FAh">
+                                <rect key="frame" x="16" y="421" width="361" height="20.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="soE-ca-1KS">
-                                <rect key="frame" x="156.33333333333334" y="450" width="80.333333333333343" height="40"/>
+                                <rect key="frame" x="156.33333333333334" y="449.33333333333331" width="80.333333333333343" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="tgD-fO-0KE"/>
                                 </constraints>
@@ -69,9 +69,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ehP-eh-ZhZ" firstAttribute="top" secondItem="Osn-SP-qAl" secondAttribute="top" constant="8" id="5bk-36-He2"/>
+                            <constraint firstItem="3VU-9o-FAh" firstAttribute="leading" secondItem="Osn-SP-qAl" secondAttribute="leading" constant="16" id="LOe-Vh-HI4"/>
                             <constraint firstItem="soE-ca-1KS" firstAttribute="top" secondItem="3VU-9o-FAh" secondAttribute="bottom" constant="8" id="MdO-xB-KXe"/>
                             <constraint firstItem="soE-ca-1KS" firstAttribute="centerX" secondItem="rxs-un-aX7" secondAttribute="centerX" id="NXI-tT-Tpr"/>
-                            <constraint firstItem="3VU-9o-FAh" firstAttribute="centerX" secondItem="rxs-un-aX7" secondAttribute="centerX" id="cSC-Gj-thu"/>
+                            <constraint firstItem="Osn-SP-qAl" firstAttribute="trailing" secondItem="3VU-9o-FAh" secondAttribute="trailing" constant="16" id="VQz-W8-PKt"/>
                             <constraint firstItem="ehP-eh-ZhZ" firstAttribute="centerX" secondItem="rxs-un-aX7" secondAttribute="centerX" id="lHw-yI-2aL"/>
                             <constraint firstItem="3VU-9o-FAh" firstAttribute="top" secondItem="ehP-eh-ZhZ" secondAttribute="bottom" constant="8" id="xrS-Xy-RcR"/>
                         </constraints>

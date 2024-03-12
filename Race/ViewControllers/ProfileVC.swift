@@ -31,6 +31,23 @@ class ProfileVC: UIViewController {
         setupBackgroundImage()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(updateUsername(_:)),
+            name: NSNotification.Name("updateUsername"),
+            object: nil)
+    }
+    
+    @objc func updateUsername(_ notification: Notification) {
+        
+        if let username = notification.userInfo?["username"] {
+            self.greetingsLabel.text = "Hello, \(username)!"
+        }
+    }
+    
     private func setupGreetingsLabel() {
         
         self.greetingsLabel.text = "Hello, Player!"

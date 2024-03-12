@@ -69,6 +69,12 @@ extension AuthVC: UITextFieldDelegate {
         } else if textField == self.secondNameTextField {
             self.username += (textField.text ?? "")
         }
+        
+        NotificationCenter.default.post(
+            name: NSNotification.Name("updateUsername"),
+            object: nil,
+            userInfo: ["username" : self.username]
+        )
     }
     
 }
