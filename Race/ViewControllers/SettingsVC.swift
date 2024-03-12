@@ -13,6 +13,8 @@ class SettingsVC: UIViewController {
     
     private let settings = SettingsManager.shared.settings
     
+    private let backgroundManager = BackgroundManager()
+    
     // MARK: - Outlets
     
     @IBOutlet weak var tableView: UITableView!
@@ -25,7 +27,7 @@ class SettingsVC: UIViewController {
         
         setupTitle()
         
-        setupBackgroundImage()
+        self.backgroundManager.setupBackgroundImage(self.view, backgroundImage: "bg-settings")
         
         setupTableView()
     }
@@ -38,23 +40,6 @@ class SettingsVC: UIViewController {
         self.title = "Settings"
         
         self.navigationController?.navigationBar.prefersLargeTitles = true
-    }
-    
-    private func setupBackgroundImage() {
-        
-        guard let backgroundImage = UIImage(named: "bg-settings") else { return }
-        
-        let backgroundImageView = UIImageView(image: backgroundImage)
-        
-        backgroundImageView.contentMode = .scaleAspectFill
-        
-        backgroundImageView.frame = self.view.bounds
-        
-        backgroundImageView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        
-        self.view.addSubview(backgroundImageView)
-        
-        self.view.sendSubviewToBack(backgroundImageView)
     }
     
     private func setupTableView() {

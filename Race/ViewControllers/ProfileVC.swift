@@ -10,6 +10,10 @@ import Lottie
 
 class ProfileVC: UIViewController {
     
+    // MARK: - Properties
+    
+    private let backgroundManager = BackgroundManager()
+    
     // MARK: - Outlets
     
     @IBOutlet weak var animationView: LottieAnimationView!
@@ -28,7 +32,7 @@ class ProfileVC: UIViewController {
         
         setupGreetingsLabel()
         
-        setupBackgroundImage()
+        self.backgroundManager.setupBackgroundImage(self.view, backgroundImage: "bg-profile")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -79,23 +83,6 @@ class ProfileVC: UIViewController {
         self.title = "Profile"
         
         self.navigationController?.navigationBar.prefersLargeTitles = true
-    }
-    
-    private func setupBackgroundImage() {
-        
-        guard let backgroundImage = UIImage(named: "bg-profile") else { return }
-        
-        let backgroundImageView = UIImageView(image: backgroundImage)
-        
-        backgroundImageView.contentMode = .scaleAspectFill
-        
-        backgroundImageView.frame = self.view.bounds
-        
-        backgroundImageView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        
-        self.view.addSubview(backgroundImageView)
-        
-        self.view.sendSubviewToBack(backgroundImageView)
     }
     
 }

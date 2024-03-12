@@ -9,6 +9,8 @@ import UIKit
 
 class MenuVC: UIViewController {
     
+    private let backgroundManager = BackgroundManager()
+    
     // MARK: - Outlets
     
     @IBOutlet weak var startButton: UIButton!
@@ -21,7 +23,7 @@ class MenuVC: UIViewController {
         
         setupTitle()
         
-        setupBackgroundImage()
+        self.backgroundManager.setupBackgroundImage(self.view, backgroundImage: "bg-menu")
         
         setupStartButton()
     }
@@ -42,23 +44,6 @@ class MenuVC: UIViewController {
         self.navigationController?.navigationBar.prefersLargeTitles = true
     }
     
-    private func setupBackgroundImage() {
-        
-        guard let backgroundImage = UIImage(named: "bg-menu") else { return }
-        
-        let backgroundImageView = UIImageView(image: backgroundImage)
-        
-        backgroundImageView.contentMode = .scaleAspectFill
-        
-        backgroundImageView.frame = self.view.bounds
-        
-        backgroundImageView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        
-        self.view.addSubview(backgroundImageView)
-        
-        self.view.sendSubviewToBack(backgroundImageView)
-    }
-    
     private func setupStartButton() {
         
         self.startButton.layer.cornerRadius = 5
@@ -74,4 +59,5 @@ class MenuVC: UIViewController {
     }
     
 }
+
 

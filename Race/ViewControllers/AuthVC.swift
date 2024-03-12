@@ -21,6 +21,8 @@ class AuthVC: UIViewController {
     
     private var username = "user"
     
+    private let backgroundManager = BackgroundManager()
+    
     // MARK: - View Lifecycle
     
     override func viewDidLoad() {
@@ -34,7 +36,7 @@ class AuthVC: UIViewController {
         
         self.secondNameTextField.delegate = self
         
-        setupBackgroundImage()
+        self.backgroundManager.setupBackgroundImage(self.view, backgroundImage: "bg-profile")
     }
     
     deinit {
@@ -42,23 +44,6 @@ class AuthVC: UIViewController {
     }
     
     // MARK: - Private Methods
-    
-    private func setupBackgroundImage() {
-        
-        guard let backgroundImage = UIImage(named: "bg-profile") else { return }
-        
-        let backgroundImageView = UIImageView(image: backgroundImage)
-        
-        backgroundImageView.contentMode = .scaleAspectFill
-        
-        backgroundImageView.frame = self.view.bounds
-        
-        backgroundImageView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        
-        self.view.addSubview(backgroundImageView)
-        
-        self.view.sendSubviewToBack(backgroundImageView)
-    }
     
     private func setupAuthTitleLabel() {
         

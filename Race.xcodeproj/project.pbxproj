@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CC75041F2B9EE5A300D51B2A /* AuthVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC75041E2B9EE5A300D51B2A /* AuthVC.swift */; };
+		CC7504212BA063B700D51B2A /* BackgroundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7504202BA063B700D51B2A /* BackgroundManager.swift */; };
 		CCC7B4832B73EFA9009AF65C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC7B4822B73EFA9009AF65C /* AppDelegate.swift */; };
 		CCC7B4852B73EFA9009AF65C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC7B4842B73EFA9009AF65C /* SceneDelegate.swift */; };
 		CCC7B4872B73EFA9009AF65C /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC7B4862B73EFA9009AF65C /* MenuVC.swift */; };
@@ -28,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		CC75041E2B9EE5A300D51B2A /* AuthVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthVC.swift; sourceTree = "<group>"; };
+		CC7504202BA063B700D51B2A /* BackgroundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundManager.swift; sourceTree = "<group>"; };
 		CCC7B47F2B73EFA9009AF65C /* Race.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Race.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCC7B4822B73EFA9009AF65C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CCC7B4842B73EFA9009AF65C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				CCC8084C2B7B9D6D006D013E /* SettingsManager.swift */,
+				CC7504202BA063B700D51B2A /* BackgroundManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 				CCC8084F2B7BBE02006D013E /* ProfileVC.swift in Sources */,
 				CCC7B4A02B764CD0009AF65C /* TableViewCell.swift in Sources */,
 				CCC7B4832B73EFA9009AF65C /* AppDelegate.swift in Sources */,
+				CC7504212BA063B700D51B2A /* BackgroundManager.swift in Sources */,
 				CCC7B4852B73EFA9009AF65C /* SceneDelegate.swift in Sources */,
 				CCCF66A52B7E482F00A54135 /* StatsVC.swift in Sources */,
 			);
