@@ -7,9 +7,13 @@
 
 import UIKit
 
+import AVFAudio
+
 class MenuVC: UIViewController {
     
     private let backgroundManager = BackgroundManager()
+    
+    var audioPlayer: AVAudioPlayer?
     
     // MARK: - Outlets
     
@@ -26,6 +30,32 @@ class MenuVC: UIViewController {
         self.backgroundManager.setupBackgroundImage(self.view, backgroundImage: "bg-menu")
         
         setupStartButton()
+        
+        setupAudioPlayer()
+    }
+    
+    private func setupAudioPlayer() {
+        
+        guard let musicURL = Bundle.main.url(forResource: "background_music", withExtension: "mp3") else {
+            
+            print("Failed to find background_music.mp3")
+            
+            return
+        }
+        
+        do {
+            
+            audioPlayer = try AVAudioPlayer(contentsOf: musicURL)
+            
+            audioPlayer?.numberOfLoops = -1
+            
+            audioPlayer?.play()
+            
+        } catch {
+            
+            print("Error initializing audio player: \(error.localizedDescription)")
+            
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
