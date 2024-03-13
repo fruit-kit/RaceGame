@@ -16,7 +16,5 @@ class StatsVC: UIViewController {
         
         self.backgroundManager.setupBackgroundImage(self.view, backgroundImage: "bg-menu")
     }
-    
-    
-    
+
 }
