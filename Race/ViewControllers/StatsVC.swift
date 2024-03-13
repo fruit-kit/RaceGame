@@ -9,10 +9,12 @@ import UIKit
 
 class StatsVC: UIViewController {
     
+    private let backgroundManager = BackgroundManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.backgroundManager.setupBackgroundImage(self.view, backgroundImage: "bg-menu")
     }
     
     
