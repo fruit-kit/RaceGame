@@ -32,6 +32,17 @@ class MenuVC: UIViewController {
         setupStartButton()
         
         setupAudioPlayer()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(switcherValueChanged(_:)), name: Notification.Name("SwitcherValueChanged"), object: nil)
+    }
+    
+    @objc func switcherValueChanged(_ notification: Notification) {
+        guard let isOn = notification.object as? Bool else { return }
+        if isOn {
+            audioPlayer?.play()
+        } else {
+            audioPlayer?.pause()
+        }
     }
     
     private func setupAudioPlayer() {
