@@ -38,6 +38,13 @@ class MenuVC: UIViewController {
         setupNotificationObserver()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        
+        super.viewWillAppear(animated)
+        
+        startButtonAnimation()
+    }
+    
     @objc func switcherValueChanged(_ notification: Notification) {
         
         guard let isOn = notification.object as? Bool else { return }
@@ -52,6 +59,12 @@ class MenuVC: UIViewController {
             
         }
     }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    // MARK: - Private Methods
     
     private func setupNotificationObserver() {
         
@@ -81,15 +94,6 @@ class MenuVC: UIViewController {
             
         }
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        
-        super.viewWillAppear(animated)
-        
-        startButtonAnimation()
-    }
-    
-    // MARK: - Private Methods
     
     private func setupTitle() {
         

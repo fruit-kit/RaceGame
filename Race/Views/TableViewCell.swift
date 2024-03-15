@@ -23,6 +23,10 @@ class TableViewCell: UITableViewCell {
         NotificationCenter.default.post(name: Notification.Name("SwitcherValueChanged"), object: sender.isOn)
     }
     
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
