@@ -11,9 +11,11 @@ import AVFAudio
 
 class MenuVC: UIViewController {
     
+    // MARK: - Properties
+    
     private let backgroundManager = BackgroundManager()
     
-    var audioPlayer: AVAudioPlayer?
+    private var audioPlayer: AVAudioPlayer?
     
     // MARK: - Outlets
     
@@ -37,11 +39,17 @@ class MenuVC: UIViewController {
     }
     
     @objc func switcherValueChanged(_ notification: Notification) {
+        
         guard let isOn = notification.object as? Bool else { return }
+        
         if isOn {
+            
             audioPlayer?.play()
+            
         } else {
+            
             audioPlayer?.pause()
+            
         }
     }
     

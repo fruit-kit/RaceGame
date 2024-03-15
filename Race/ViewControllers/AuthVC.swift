@@ -26,15 +26,14 @@ class AuthVC: UIViewController {
     // MARK: - View Lifecycle
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
 
         setupAuthTitleLabel()
         
         setupTextFields()
         
-        self.firstNameTextField.delegate = self
-        
-        self.secondNameTextField.delegate = self
+        setupDelegates()
         
         self.backgroundManager.setupBackgroundImage(self.view, backgroundImage: "bg-profile")
     }
@@ -44,6 +43,13 @@ class AuthVC: UIViewController {
     }
     
     // MARK: - Private Methods
+    
+    private func setupDelegates() {
+        
+        self.firstNameTextField.delegate = self
+        
+        self.secondNameTextField.delegate = self
+    }
     
     private func setupAuthTitleLabel() {
         
@@ -74,9 +80,13 @@ extension AuthVC: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
         if textField == self.firstNameTextField {
+            
             self.secondNameTextField.becomeFirstResponder()
+            
         } else if textField == self.secondNameTextField {
+            
             self.secondNameTextField.resignFirstResponder()
+            
         }
         
         return true
@@ -85,10 +95,15 @@ extension AuthVC: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         
         if textField == self.firstNameTextField {
+            
             self.username = (textField.text ?? "user") + " "
+            
         } else if textField == self.secondNameTextField {
+            
             self.username += (textField.text ?? "")
+            
             self.dismiss(animated: true)
+            
         }
         
         NotificationCenter.default.post(

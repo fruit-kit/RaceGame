@@ -6,6 +6,7 @@
 //
 
 import UIKit
+
 import Lottie
 
 class ProfileVC: UIViewController {
@@ -36,6 +37,7 @@ class ProfileVC: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        
         super.viewWillAppear(animated)
         
         NotificationCenter.default.addObserver(
