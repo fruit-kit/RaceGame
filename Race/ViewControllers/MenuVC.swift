@@ -35,7 +35,7 @@ class MenuVC: UIViewController {
         
         setupAudioPlayer()
         
-        NotificationCenter.default.addObserver(self, selector: #selector(switcherValueChanged(_:)), name: Notification.Name("SwitcherValueChanged"), object: nil)
+        setupNotificationObserver()
     }
     
     @objc func switcherValueChanged(_ notification: Notification) {
@@ -51,6 +51,11 @@ class MenuVC: UIViewController {
             audioPlayer?.pause()
             
         }
+    }
+    
+    private func setupNotificationObserver() {
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(switcherValueChanged(_:)), name: Notification.Name("SwitcherValueChanged"), object: nil)
     }
     
     private func setupAudioPlayer() {
