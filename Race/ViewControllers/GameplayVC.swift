@@ -41,15 +41,15 @@ class GameplayVC: UIViewController {
     
     private let defaultPadding: CGFloat = 50
     
-    var screenHeight: CGFloat = 0
+    private var screenHeight: CGFloat = 0
     
-    var screenWidth: CGFloat = 0
+    private var screenWidth: CGFloat = 0
     
-    let topSafeAreaPadding = UIApplication.shared.windows.first?.safeAreaInsets.top ?? 0
+    private let topSafeAreaPadding = UIApplication.shared.windows.first?.safeAreaInsets.top ?? 0
     
-    let bottomSafeAreaPadding = UIApplication.shared.windows.first?.safeAreaInsets.bottom ?? 0
+    private let bottomSafeAreaPadding = UIApplication.shared.windows.first?.safeAreaInsets.bottom ?? 0
     
-    var navigationBarHeight: CGFloat = 0
+    private var navigationBarHeight: CGFloat = 0
     
     private enum ElementPosition {
         
