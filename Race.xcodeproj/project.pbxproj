@@ -73,6 +73,22 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		CC84B4BD2BE4C5ED00C6C27D /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				CC7504222BA19CE200D51B2A /* background_music.mp3 */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		CC84B4BE2BE4C62300C6C27D /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				CCE29CFE2B921D6400D64314 /* profile-animation.json */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
 		CCC7B4762B73EFA9009AF65C = {
 			isa = PBXGroup;
 			children = (
@@ -138,11 +154,11 @@
 			isa = PBXGroup;
 			children = (
 				CC84B4BA2BE4AD6400C6C27D /* Fonts */,
-				CC7504222BA19CE200D51B2A /* background_music.mp3 */,
+				CC84B4BD2BE4C5ED00C6C27D /* Sounds */,
+				CC84B4BE2BE4C62300C6C27D /* Animations */,
 				CCC7B49F2B764CD0009AF65C /* TableViewCell.xib */,
 				CCC7B4882B73EFA9009AF65C /* Main.storyboard */,
 				CCC7B48D2B73EFAB009AF65C /* LaunchScreen.storyboard */,
-				CCE29CFE2B921D6400D64314 /* profile-animation.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
