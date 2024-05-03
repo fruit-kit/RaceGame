@@ -10,6 +10,7 @@
 		CC75041F2B9EE5A300D51B2A /* AuthVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC75041E2B9EE5A300D51B2A /* AuthVC.swift */; };
 		CC7504212BA063B700D51B2A /* BackgroundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7504202BA063B700D51B2A /* BackgroundManager.swift */; };
 		CC7504232BA19CE200D51B2A /* background_music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CC7504222BA19CE200D51B2A /* background_music.mp3 */; };
+		CC84B4BC2BE4AF3A00C6C27D /* arturito.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CC84B4BB2BE4AF0C00C6C27D /* arturito.ttf */; };
 		CCC7B4832B73EFA9009AF65C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC7B4822B73EFA9009AF65C /* AppDelegate.swift */; };
 		CCC7B4852B73EFA9009AF65C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC7B4842B73EFA9009AF65C /* SceneDelegate.swift */; };
 		CCC7B4872B73EFA9009AF65C /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC7B4862B73EFA9009AF65C /* MenuVC.swift */; };
@@ -32,6 +33,7 @@
 		CC75041E2B9EE5A300D51B2A /* AuthVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthVC.swift; sourceTree = "<group>"; };
 		CC7504202BA063B700D51B2A /* BackgroundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundManager.swift; sourceTree = "<group>"; };
 		CC7504222BA19CE200D51B2A /* background_music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = background_music.mp3; sourceTree = "<group>"; };
+		CC84B4BB2BE4AF0C00C6C27D /* arturito.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = arturito.ttf; sourceTree = "<group>"; };
 		CCC7B47F2B73EFA9009AF65C /* Race.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Race.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCC7B4822B73EFA9009AF65C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CCC7B4842B73EFA9009AF65C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CC84B4BA2BE4AD6400C6C27D /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CC84B4BB2BE4AF0C00C6C27D /* arturito.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		CCC7B4762B73EFA9009AF65C = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +137,7 @@
 		CCC7B4A52B7650AD009AF65C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CC84B4BA2BE4AD6400C6C27D /* Fonts */,
 				CC7504222BA19CE200D51B2A /* background_music.mp3 */,
 				CCC7B49F2B764CD0009AF65C /* TableViewCell.xib */,
 				CCC7B4882B73EFA9009AF65C /* Main.storyboard */,
@@ -219,6 +230,7 @@
 			files = (
 				CC7504232BA19CE200D51B2A /* background_music.mp3 in Resources */,
 				CCC7B48F2B73EFAB009AF65C /* LaunchScreen.storyboard in Resources */,
+				CC84B4BC2BE4AF3A00C6C27D /* arturito.ttf in Resources */,
 				CCC7B4A12B764CD0009AF65C /* TableViewCell.xib in Resources */,
 				CCE29CFF2B921D6400D64314 /* profile-animation.json in Resources */,
 				CCC7B48C2B73EFAB009AF65C /* Assets.xcassets in Resources */,

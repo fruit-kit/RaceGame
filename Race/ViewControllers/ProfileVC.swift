@@ -64,7 +64,19 @@ class ProfileVC: UIViewController {
         
         self.greetingsLabel.text = "Hello, Player!"
         
-        self.greetingsLabel.font = .boldSystemFont(ofSize: 30)
+        if let cusstomFont = UIFont(name: "ArturitoSlab-Bold", size: CGFloat(30)) {
+            
+            self.greetingsLabel.font = cusstomFont
+            
+        } else {
+            
+            fatalError("""
+                    Failed to load the "CustomFont-Light" font.
+                    Make sure the font file is included in the project and the font name is spelled correctly.
+                    """
+                )
+            
+        }
         
         self.greetingsLabel.textColor = .white
     }
