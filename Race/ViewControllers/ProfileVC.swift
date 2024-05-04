@@ -15,6 +15,8 @@ class ProfileVC: UIViewController {
     
     private let backgroundManager = BackgroundManager()
     
+    private let usernameKey = "username"
+    
     // MARK: - Outlets
     
     @IBOutlet weak var animationView: LottieAnimationView!
@@ -34,6 +36,10 @@ class ProfileVC: UIViewController {
         setupGreetingsLabel()
         
         self.backgroundManager.setupBackgroundImage(self.view, backgroundImage: "bg-profile")
+        
+        if let savedUsername = UserDefaults.standard.string(forKey: usernameKey) {
+                    greetingsLabel.text = "Hello, \(savedUsername)!"
+                }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -54,7 +60,11 @@ class ProfileVC: UIViewController {
     @objc func updateUsername(_ notification: Notification) {
         
         if let username = notification.userInfo?["username"] {
+            
             self.greetingsLabel.text = "Hello, \(username)!"
+            
+            UserDefaults.standard.set(username, forKey: usernameKey)
+            
         }
     }
     
